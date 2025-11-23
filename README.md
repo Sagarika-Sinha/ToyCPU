@@ -17,4 +17,7 @@ Contains the modelsim script for showing pc,instruction, flags,register contents
 ### 7.waveform.png
 Showing all necessary waveforms.
 ### 8.sorted_dm.png
-Showing final sorted data_memory contents.
+Showing final sorted data_memory contents.  
+### 9.project_report_toycpu.pdf  
+Report detailing al our work.  
+
