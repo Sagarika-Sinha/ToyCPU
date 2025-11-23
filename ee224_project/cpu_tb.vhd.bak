@@ -1,0 +1,61 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+
+entity cpu_tb is
+-- Testbench has no ports
+end cpu_tb;
+
+architecture Behavioral of cpu_tb is
+
+    -- Component Declaration for the Unit Under Test (UUT)
+    component cpu
+        port(
+            clock : in std_logic;
+            reset : in std_logic
+        );
+    end component;
+
+    -- Testbench Signals
+    signal clock : std_logic := '0';
+    signal reset : std_logic := '0';
+
+    -- Clock period (50 MHz)
+    constant clock_period : time := 20 ns;
+
+begin
+
+    -- Instantiate the CPU
+    uut: entity work.cpu port map (
+        clock => clock,
+        reset => reset
+    );
+
+    -- Clock Generation Process
+    clock_process :process
+    begin
+        clock <= '0';
+        wait for clock_period/2;
+        clock <= '1';
+        wait for clock_period/2;
+    end process;
+
+    -- Stimulus Process
+    stim_proc: process
+    begin
+        -- 1. Hold Reset for 100 ns to initialize PC and Registers
+        reset <= '1';
+        wait for 100 ns;
+        
+        -- 2. Release Reset to start execution
+        reset <= '0';
+        
+        -- 3. Run simulation for enough time to complete Bubble Sort
+        -- Bubble sort of 10 elements ~ O(N^2) instructions.
+        -- 50,000 ns = 2500 clock cycles, which should be sufficient.
+        wait for 50000 ns; 
+
+        -- 4. Stop simulation
+        wait;
+    end process;
+
+end Behavioral;

@@ -1,0 +1,91 @@
+-- alu_beh.vhd
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity alu_beh is
+  port(
+    A       : in  std_logic_vector(7 downto 0);
+    B       : in  std_logic_vector(7 downto 0);
+    alu_sel : in  std_logic_vector(1 downto 0); -- "00"=SHL, "01"=SHR, "10"=ADD, "11"=SUB/CMP
+    RESULT  : out std_logic_vector(7 downto 0);
+    FLAG_Z  : out std_logic; -- zero
+    FLAG_N  : out std_logic; -- negative (sign)
+    FLAG_C  : out std_logic; -- carry
+    FLAG_V  : out std_logic  -- overflow (signed)
+  );
+end entity;
+
+architecture behavioral of alu_beh is
+  signal tmp_u  : unsigned(8 downto 0); -- for add with carry bit
+  signal tmp8_u : unsigned(7 downto 0);
+  signal tmp_s  : signed(8 downto 0);
+  signal res    : std_logic_vector(7 downto 0);
+  signal c_out  : std_logic;
+  signal v_out  : std_logic;
+begin
+  process(A, B, alu_sel)
+    variable Au   : unsigned(7 downto 0);
+    variable Bu   : unsigned(7 downto 0);
+    variable As   : signed(7 downto 0);
+    variable Bs   : signed(7 downto 0);
+    variable sum9 : unsigned(8 downto 0);
+    variable diff9: signed(8 downto 0);
+    variable tmpv : std_logic;
+  begin
+    Au := unsigned(A);
+    Bu := unsigned(B);
+    As := signed(A);
+    Bs := signed(B);
+
+    -- defaults
+    res    := (others => '0');
+    c_out  := '0';
+    v_out  := '0';
+
+    case alu_sel is
+      when "00" => -- SHL logical by 1
+        res := std_logic_vector(A(6 downto 0) & '0');
+        c_out := A(7);           -- shifted-out MSB becomes carry
+        v_out := '0';           -- no signed overflow defined for simple shift
+      when "01" => -- SHR logical by 1
+        res := std_logic_vector('0' & A(7 downto 1));
+        c_out := A(0);          -- shifted-out LSB becomes carry
+        v_out := '0';
+      when "10" => -- ADD
+        sum9 := ("0" & Au) + ("0" & Bu); -- 9-bit result to capture carry
+        res  := std_logic_vector(sum9(7 downto 0));
+        c_out := sum9(8); -- carry-out (unsigned carry)
+        -- signed overflow detection: if signed(A)+signed(B) out of range
+        tmp_s := signed('0' & A) + signed('0' & B); -- 9-bit signed
+        if (tmp_s > to_signed(127,9)) or (tmp_s < to_signed(-128,9)) then
+          v_out := '1';
+        else
+          v_out := '0';
+        end if;
+      when others => -- "11" SUB/CMP (A - B)
+        -- unsigned borrow detection => borrow = (Au < Bu)
+        if Au < Bu then
+          c_out := '0'; -- set carry=0 to indicate borrow (convention)
+        else
+          c_out := '1'; -- no borrow => carry = 1
+        end if;
+        tmp8_u := Au - Bu;
+        res := std_logic_vector(tmp8_u);
+        -- signed overflow detection for subtraction A - B
+        diff9 := signed('0' & A) - signed('0' & B);
+        if (diff9 > to_signed(127,9)) or (diff9 < to_signed(-128,9)) then
+          v_out := '1';
+        else
+          v_out := '0';
+        end if;
+    end case;
+
+    -- place outputs
+    RESULT <= res;
+    FLAG_Z <= '1' when res = (others => '0') else '0';
+    FLAG_N <= res(7);
+    FLAG_C <= c_out;
+    FLAG_V <= v_out;
+  end process;
+end architecture;

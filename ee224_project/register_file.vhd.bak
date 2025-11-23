@@ -1,0 +1,95 @@
+-- Register File Entity Declaration
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.NUMERIC_STD.ALL;
+
+entity Register_File is
+    port (
+        -- Global Signals
+        clock           : in  std_logic;                                 -- Clock for synchronous write
+        reset           : in  std_logic;                                 -- Reset to clear all registers
+        
+        -- Write Port (Control Unit outputs C8, C9, C10)
+        reg_file_input    : in  std_logic_vector(7 downto 0);            -- 8-bit data to be written
+        c8  : in  std_logic; 
+        c9:in std_logic	;	  -- 2-bit register address (C8, C9)
+        c10  : in  std_logic;                                 -- Write enable signal (C10)
+        
+        -- Read Port 0 (Control Unit outputs C4, C5)
+        c4:in std_logic;
+        c5:in std_logic;
+        c6:in std_logic;
+        c7:in std_logic;		  -- 2-bit register address (C4, C5)
+        alu_in_1:out std_logic_vector(7 downto 0);            -- 8-bit data output from Port 0
+        
+        alu_source_0 : out std_logic_vector(7 downto 0)             -- 8-bit data output from Port 1
+    );
+end entity Register_File;
+
+-- Register File Architecture
+architecture Behavioral of Register_File is
+    
+    -- Define the Register File as an array of 8-bit vectors
+    -- The indices 0, 1, 2, 3 correspond to Registers A, B, C, D
+    type Reg_Array is array (0 to 3) of std_logic_vector(7 downto 0);
+    signal Registers : Reg_Array;
+
+begin
+    
+    -- *** 1. Synchronous Write Logic (Clocked Process) ***
+    -- This process handles register initialization (RST) and writing new data (CLK, Write_Enable).
+    Process_Write : process(clock, reset)
+    begin
+        if reset = '1' then
+            -- Clear all registers on reset (Registers A, B, C, D)
+            Registers <= (others => (others => '0'));
+            
+        elsif rising_edge(CLK) then
+            if c10 = '1' then
+                -- Convert the 2-bit select signal to an integer index (0-3)
+                -- This implements the WRITE_SELECTI (C8, C9) control
+                case c8&c9 is
+                    when "00" => -- Select Register A
+                        Registers(0) <= reg_file_input;
+                    when "01" => -- Select Register B
+                        Registers(1) <= reg_file_input;
+                    when "10" => -- Select Register C
+                        Registers(2) <= reg_file_input;
+                    when "11" => -- Select Register D
+                        Registers(3) <= reg_file_input;
+                    when others => null; -- Should not happen
+                end case;
+            end if;
+        end if;
+    end process Process_Write;
+    
+    -- *** 2. Asynchronous Read Logic (Combinational Assignments) ***
+    -- Read ports are always active and output the data from the selected register.
+    
+    -- Port 0 Read: Selects data for Read0_Data based on Read0_Select (C4, C5)
+    Process_Read0 : process(c4&c5, Registers)
+    begin
+        -- This implements the PORTO_SELECTI (C4, C5) control
+        case c4&c5 is
+            when "00" => alu_in_1 <= Registers(0);  -- Read Register A
+            when "01" => alu_in_1 <= Registers(1);  -- Read Register B
+            when "10" => alu_in_1 <= Registers(2);  -- Read Register C
+            when "11" => alu_in_1 <= Registers(3);  -- Read Register D
+            when others => alu_in_1 <= (others => '0'); -- Default case (or undefined behavior)
+        end case;
+    end process Process_Read0;
+    
+    -- Port 1 Read: Selects data for Read1_Data based on Read1_Select (C6, C7)
+    Process_Read1 : process(c4&c5, Registers)
+    begin
+        -- This implements the PORT1_SELECTI (C6, C7) control
+        case c4&c5 is
+            when "00" => alu_source_0 <= Registers(0);  -- Read Register A
+            when "01" => alu_source_0<= Registers(1);  -- Read Register B
+            when "10" => alu_source_0<= Registers(2);  -- Read Register C
+            when "11" => au_source_0<= Registers(3);  -- Read Register D
+            when others => alu_source_0 <= (others => '0'); -- Default case (or undefined behavior)
+        end case;
+    end process Process_Read1;
+    
+end architecture Behavioral;

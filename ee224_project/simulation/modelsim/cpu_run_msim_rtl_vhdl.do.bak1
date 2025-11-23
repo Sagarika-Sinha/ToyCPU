@@ -1,0 +1,29 @@
+transcript on
+if {[file exists rtl_work]} {
+	vdel -lib rtl_work -all
+}
+vlib rtl_work
+vmap work rtl_work
+
+vcom -93 -work work {C:/Users/sagar/Downloads/ee224_project/flags_register.vhd}
+vcom -93 -work work {C:/Users/sagar/Downloads/ee224_project/alu.vhd}
+vcom -93 -work work {C:/Users/sagar/Downloads/ee224_project/code_memory.vhd}
+vcom -93 -work work {C:/Users/sagar/Downloads/ee224_project/opcode_decoder.vhd}
+vcom -93 -work work {C:/Users/sagar/Downloads/ee224_project/control_logic.vhd}
+vcom -93 -work work {C:/Users/sagar/Downloads/ee224_project/register_file.vhd}
+vcom -93 -work work {C:/Users/sagar/Downloads/ee224_project/program_counter.vhd}
+vcom -93 -work work {C:/Users/sagar/Downloads/ee224_project/pc_update_logic.vhd}
+vcom -93 -work work {C:/Users/sagar/Downloads/ee224_project/data_memory.vhd}
+vcom -93 -work work {C:/Users/sagar/Downloads/ee224_project/eight_bit_mux.vhd}
+vcom -93 -work work {C:/Users/sagar/Downloads/ee224_project/six_bit_mux.vhd}
+vcom -93 -work work {C:/Users/sagar/Downloads/ee224_project/cpu.vhd}
+
+vcom -93 -work work {C:/Users/sagar/Downloads/ee224_project/cpu.vhd}
+vcom -93 -work work {C:/Users/sagar/Downloads/ee224_project/cpu_tb.vhd}
+
+vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L fiftyfivenm -L rtl_work -L work -voptargs="+acc"  cpu_tb
+
+add wave *
+view structure
+view signals
+run -all

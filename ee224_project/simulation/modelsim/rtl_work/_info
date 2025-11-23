@@ -1,0 +1,548 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/sagar/Downloads/ee224_project/simulation/modelsim
+Ealu
+Z1 w1763650507
+Z2 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z4 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z5 8C:/Users/sagar/Downloads/ee224_project/alu.vhd
+Z6 FC:/Users/sagar/Downloads/ee224_project/alu.vhd
+l0
+L5
+V^QcZO8jA@kf9?jG]2G<DK1
+!s100 5W2HfPmngmV0fRAiQIgj[0
+Z7 OV;C;10.5b;63
+31
+Z8 !s110 1763656672
+!i10b 1
+Z9 !s108 1763656672.000000
+Z10 !s90 -reportprogress|300|-93|-work|work|C:/Users/sagar/Downloads/ee224_project/alu.vhd|
+Z11 !s107 C:/Users/sagar/Downloads/ee224_project/alu.vhd|
+!i113 1
+Z12 o-93 -work work
+Z13 tExplicit 1 CvgOpt 0
+Abehavioral
+R2
+R3
+R4
+Z14 DEx4 work 3 alu 0 22 ^QcZO8jA@kf9?jG]2G<DK1
+l23
+L22
+VaPI]dHNzlSBoh0zacYFj^0
+!s100 7]Wg`eW9mGKzf@<EbZHY^1
+R7
+31
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Ecode_memory
+Z15 w1763655817
+R2
+R3
+R4
+R0
+Z16 8C:/Users/sagar/Downloads/ee224_project/code_memory.vhd
+Z17 FC:/Users/sagar/Downloads/ee224_project/code_memory.vhd
+l0
+L5
+VE:R8W0?DI7VK4W@enTi?^1
+!s100 :Z7Db288^J?oA7ThINNoV2
+R7
+31
+R8
+!i10b 1
+R9
+Z18 !s90 -reportprogress|300|-93|-work|work|C:/Users/sagar/Downloads/ee224_project/code_memory.vhd|
+Z19 !s107 C:/Users/sagar/Downloads/ee224_project/code_memory.vhd|
+!i113 1
+R12
+R13
+Abehavioral
+R2
+R3
+R4
+Z20 DEx4 work 11 code_memory 0 22 E:R8W0?DI7VK4W@enTi?^1
+l83
+L16
+V[imnbEz=HDj@R=obUe95;1
+!s100 LZ>>=ATGiFj3WkR7K1>kW2
+R7
+31
+R8
+!i10b 1
+R9
+R18
+R19
+!i113 1
+R12
+R13
+Econtrol_logic
+Z21 w1763646198
+R3
+R4
+R0
+Z22 8C:/Users/sagar/Downloads/ee224_project/control_logic.vhd
+Z23 FC:/Users/sagar/Downloads/ee224_project/control_logic.vhd
+l0
+L16
+V4gUo5fEE]E[>WB<]:Ybf50
+!s100 i^ZR]:ND=lz1E[4^1kLJb3
+R7
+31
+R8
+!i10b 1
+R9
+Z24 !s90 -reportprogress|300|-93|-work|work|C:/Users/sagar/Downloads/ee224_project/control_logic.vhd|
+Z25 !s107 C:/Users/sagar/Downloads/ee224_project/control_logic.vhd|
+!i113 1
+R12
+R13
+Abehavioral
+R3
+R4
+Z26 DEx4 work 13 control_logic 0 22 4gUo5fEE]E[>WB<]:Ybf50
+l94
+L56
+VgWGcB]dGDccUYQj^OLYk]0
+!s100 lYlYgES5P7YjRi[96l2CB1
+R7
+31
+R8
+!i10b 1
+R9
+R24
+R25
+!i113 1
+R12
+R13
+Ecpu
+Z27 w1763646274
+R2
+R3
+R4
+R0
+Z28 8C:/Users/sagar/Downloads/ee224_project/cpu.vhd
+Z29 FC:/Users/sagar/Downloads/ee224_project/cpu.vhd
+l0
+L5
+V0MK8C`3>_`GoR>Qg<mPkj3
+!s100 cUfjSPjE=Q82O^A=B72Fh2
+R7
+31
+Z30 !s110 1763656675
+!i10b 1
+Z31 !s108 1763656675.000000
+Z32 !s90 -reportprogress|300|-93|-work|work|C:/Users/sagar/Downloads/ee224_project/cpu.vhd|
+Z33 !s107 C:/Users/sagar/Downloads/ee224_project/cpu.vhd|
+!i113 1
+R12
+R13
+Astruct
+Z34 DEx4 work 11 data_memory 0 22 8=WA=JhcVTPkF`N@A2iIE2
+Z35 DEx4 work 15 program_counter 0 22 <?GnUQTl;]0=F^Jk3l;@R2
+Z36 DEx4 work 11 six_bit_mux 0 22 <;P7>BZoEMPP96T3TB[`G1
+Z37 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+Z38 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
+Z39 DEx4 work 8 pc_logic 0 22 @b_mSckKTnje0YdRMl]E;2
+Z40 DEx4 work 14 flags_register 0 22 hfzlA@JC>KVeD0g^>koEe0
+R14
+Z41 DEx4 work 13 eight_bit_mux 0 22 mSZ8h:UmjY]ERBX;NXj<;3
+Z42 DEx4 work 13 register_file 0 22 fM:200zIUTfcMof@1hm4C3
+R26
+Z43 DEx4 work 14 opcode_decoder 0 22 :HKH[<8llU4H77g8Y=TOG2
+R20
+R2
+R3
+R4
+DEx4 work 3 cpu 0 22 0MK8C`3>_`GoR>Qg<mPkj3
+l18
+L9
+V;BfzHnIk=iNfcO9nJkWM61
+!s100 9mmMF5ilJG6bi=bF10nBV1
+R7
+31
+R30
+!i10b 1
+R31
+R32
+R33
+!i113 1
+R12
+R13
+Ecpu_tb
+Z44 w1763648094
+R3
+R4
+R0
+Z45 8C:/Users/sagar/Downloads/ee224_project/cpu_tb.vhd
+Z46 FC:/Users/sagar/Downloads/ee224_project/cpu_tb.vhd
+l0
+L4
+VaLOEX5fCoeUdShWPI[>GH3
+!s100 S[>g46z6nm1SHm5M^JRgd3
+R7
+31
+Z47 !s110 1763656676
+!i10b 1
+Z48 !s108 1763656676.000000
+Z49 !s90 -reportprogress|300|-93|-work|work|C:/Users/sagar/Downloads/ee224_project/cpu_tb.vhd|
+Z50 !s107 C:/Users/sagar/Downloads/ee224_project/cpu_tb.vhd|
+!i113 1
+R12
+R13
+Abehavioral
+R3
+R4
+DEx4 work 6 cpu_tb 0 22 aLOEX5fCoeUdShWPI[>GH3
+l24
+L8
+VNDRdnNjePWn<Iha:BN;gn0
+!s100 n`GVG7BS1cgne<H1UmObi3
+R7
+31
+R47
+!i10b 1
+R48
+R49
+R50
+!i113 1
+R12
+R13
+Edata_memory
+Z51 w1763655637
+R2
+R3
+R4
+R0
+Z52 8C:/Users/sagar/Downloads/ee224_project/data_memory.vhd
+Z53 FC:/Users/sagar/Downloads/ee224_project/data_memory.vhd
+l0
+L5
+V8=WA=JhcVTPkF`N@A2iIE2
+!s100 k3ZF^PGY]bF3BXLm?SWRd3
+R7
+31
+Z54 !s110 1763656673
+!i10b 1
+Z55 !s108 1763656673.000000
+Z56 !s90 -reportprogress|300|-93|-work|work|C:/Users/sagar/Downloads/ee224_project/data_memory.vhd|
+Z57 !s107 C:/Users/sagar/Downloads/ee224_project/data_memory.vhd|
+!i113 1
+R12
+R13
+Abehavioral
+R2
+R3
+R4
+R34
+l41
+L18
+VE>6T@BI6QFTn39MRjSGe43
+!s100 C?[_@cFBOofG>InBVbmj`0
+R7
+31
+R54
+!i10b 1
+R55
+R56
+R57
+!i113 1
+R12
+R13
+Eeight_bit_mux
+Z58 w1763558151
+R2
+R3
+R4
+R0
+Z59 8C:/Users/sagar/Downloads/ee224_project/eight_bit_mux.vhd
+Z60 FC:/Users/sagar/Downloads/ee224_project/eight_bit_mux.vhd
+l0
+L5
+VmSZ8h:UmjY]ERBX;NXj<;3
+!s100 hT_=fFJ7nD<cc6HO=`lj]0
+R7
+31
+R54
+!i10b 1
+R55
+Z61 !s90 -reportprogress|300|-93|-work|work|C:/Users/sagar/Downloads/ee224_project/eight_bit_mux.vhd|
+Z62 !s107 C:/Users/sagar/Downloads/ee224_project/eight_bit_mux.vhd|
+!i113 1
+R12
+R13
+Astruct
+R2
+R3
+R4
+R41
+l11
+L10
+VfJEjgmNKbZQUSeQ2^keX_1
+!s100 `?lGV9Z<9g9KkDgCM[6m@2
+R7
+31
+R54
+!i10b 1
+R55
+R61
+R62
+!i113 1
+R12
+R13
+Eflags_register
+Z63 w1763648100
+R3
+R4
+R0
+Z64 8C:/Users/sagar/Downloads/ee224_project/flags_register.vhd
+Z65 FC:/Users/sagar/Downloads/ee224_project/flags_register.vhd
+l0
+L8
+VhfzlA@JC>KVeD0g^>koEe0
+!s100 Ke[?HL7FYb6B^3?zdLff00
+R7
+31
+R54
+!i10b 1
+R55
+Z66 !s90 -reportprogress|300|-93|-work|work|C:/Users/sagar/Downloads/ee224_project/flags_register.vhd|
+Z67 !s107 C:/Users/sagar/Downloads/ee224_project/flags_register.vhd|
+!i113 1
+R12
+R13
+Abehavioral
+R3
+R4
+R40
+l27
+L26
+VCzo?6Po[igoP3SC=n5G>c0
+!s100 jh=NGA6WQ:Eo2V[5=U;L^0
+R7
+31
+R54
+!i10b 1
+R55
+R66
+R67
+!i113 1
+R12
+R13
+Eopcode_decoder
+Z68 w1761238814
+R3
+R4
+R0
+Z69 8C:/Users/sagar/Downloads/ee224_project/opcode_decoder.vhd
+Z70 FC:/Users/sagar/Downloads/ee224_project/opcode_decoder.vhd
+l0
+L4
+V:HKH[<8llU4H77g8Y=TOG2
+!s100 >6^6>2L=2MMi`1iHN]:WT0
+R7
+31
+Z71 !s110 1763656674
+!i10b 1
+R55
+Z72 !s90 -reportprogress|300|-93|-work|work|C:/Users/sagar/Downloads/ee224_project/opcode_decoder.vhd|
+Z73 !s107 C:/Users/sagar/Downloads/ee224_project/opcode_decoder.vhd|
+!i113 1
+R12
+R13
+Abehavioral
+R3
+R4
+R43
+l45
+L41
+VoF;2EadMJB<?`ecQG3YFh3
+!s100 269ko`g^50GiUeKGUiPL93
+R7
+31
+R71
+!i10b 1
+R55
+R72
+R73
+!i113 1
+R12
+R13
+Epc_logic
+Z74 w1763654728
+R2
+R37
+R38
+R3
+R4
+R0
+Z75 8C:/Users/sagar/Downloads/ee224_project/pc_update_logic.vhd
+Z76 FC:/Users/sagar/Downloads/ee224_project/pc_update_logic.vhd
+l0
+L7
+V@b_mSckKTnje0YdRMl]E;2
+!s100 kkIl3LEEN47JBN0l7>fjZ0
+R7
+31
+R71
+!i10b 1
+Z77 !s108 1763656674.000000
+Z78 !s90 -reportprogress|300|-93|-work|work|C:/Users/sagar/Downloads/ee224_project/pc_update_logic.vhd|
+Z79 !s107 C:/Users/sagar/Downloads/ee224_project/pc_update_logic.vhd|
+!i113 1
+R12
+R13
+Abehavioral
+R2
+R37
+R38
+R3
+R4
+R39
+l22
+L16
+VLj=Ek:ZEmBl11^5]Ra^[o2
+!s100 Z2GhzX5]zAe=CgHQ^m4:I0
+R7
+31
+R71
+!i10b 1
+R77
+R78
+R79
+!i113 1
+R12
+R13
+Eprogram_counter
+Z80 w1763643226
+R3
+R4
+R0
+Z81 8C:/Users/sagar/Downloads/ee224_project/program_counter.vhd
+Z82 FC:/Users/sagar/Downloads/ee224_project/program_counter.vhd
+l0
+L5
+V<?GnUQTl;]0=F^Jk3l;@R2
+!s100 34]Mja@=VlcgD[G4COBg`3
+R7
+31
+R71
+!i10b 1
+R77
+Z83 !s90 -reportprogress|300|-93|-work|work|C:/Users/sagar/Downloads/ee224_project/program_counter.vhd|
+Z84 !s107 C:/Users/sagar/Downloads/ee224_project/program_counter.vhd|
+!i113 1
+R12
+R13
+Abehavioral
+R3
+R4
+R35
+l16
+L15
+VC>;Tf?>GNN:TmXeh`LQ@Z2
+!s100 9G>G^m;WSL9ViVO2>jNDn3
+R7
+31
+R71
+!i10b 1
+R77
+R83
+R84
+!i113 1
+R12
+R13
+Eregister_file
+Z85 w1763643203
+R3
+R4
+R0
+Z86 8C:/Users/sagar/Downloads/ee224_project/register_file.vhd
+Z87 FC:/Users/sagar/Downloads/ee224_project/register_file.vhd
+l0
+L6
+VfM:200zIUTfcMof@1hm4C3
+!s100 K]`0fbfi;`F^[K?6Gj1@h2
+R7
+31
+R71
+!i10b 1
+R77
+Z88 !s90 -reportprogress|300|-93|-work|work|C:/Users/sagar/Downloads/ee224_project/register_file.vhd|
+Z89 !s107 C:/Users/sagar/Downloads/ee224_project/register_file.vhd|
+!i113 1
+R12
+R13
+Abehavioral
+R3
+R4
+R42
+l42
+L30
+V;[@^1KEGDIoP`:B?4mcPn3
+!s100 5E5EEH5mLhZzc:PiTnQhO1
+R7
+31
+R71
+!i10b 1
+R77
+R88
+R89
+!i113 1
+R12
+R13
+Esix_bit_mux
+Z90 w1763569912
+R2
+R3
+R4
+R0
+Z91 8C:/Users/sagar/Downloads/ee224_project/six_bit_mux.vhd
+Z92 FC:/Users/sagar/Downloads/ee224_project/six_bit_mux.vhd
+l0
+L5
+V<;P7>BZoEMPP96T3TB[`G1
+!s100 4Vfk5EDfJhZXEUd9]ZX0@1
+R7
+31
+R30
+!i10b 1
+R31
+Z93 !s90 -reportprogress|300|-93|-work|work|C:/Users/sagar/Downloads/ee224_project/six_bit_mux.vhd|
+Z94 !s107 C:/Users/sagar/Downloads/ee224_project/six_bit_mux.vhd|
+!i113 1
+R12
+R13
+Astruct
+R2
+R3
+R4
+R36
+l11
+L10
+V0YJC[_=nNnD1l2d[HAEgd1
+!s100 QU7Sh0M@=8aXhGZOn36?^3
+R7
+31
+R30
+!i10b 1
+R31
+R93
+R94
+!i113 1
+R12
+R13

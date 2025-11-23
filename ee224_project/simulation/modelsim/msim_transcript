@@ -1,0 +1,379 @@
+# Reading C:/intelFPGA_lite/18.1/modelsim_ase/tcl/vsim/pref.tcl
+# do cpu_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/18.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {C:/Users/sagar/Downloads/ee224_project/flags_register.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:07:48 on Nov 20,2025
+# vcom -reportprogress 300 -93 -work work C:/Users/sagar/Downloads/ee224_project/flags_register.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity flags_register
+# -- Compiling architecture Behavioral of flags_register
+# End time: 22:07:49 on Nov 20,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/sagar/Downloads/ee224_project/alu.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:07:49 on Nov 20,2025
+# vcom -reportprogress 300 -93 -work work C:/Users/sagar/Downloads/ee224_project/alu.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity alu
+# -- Compiling architecture behavioral of alu
+# End time: 22:07:49 on Nov 20,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/sagar/Downloads/ee224_project/code_memory.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:07:49 on Nov 20,2025
+# vcom -reportprogress 300 -93 -work work C:/Users/sagar/Downloads/ee224_project/code_memory.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity code_memory
+# -- Compiling architecture Behavioral of code_memory
+# End time: 22:07:49 on Nov 20,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/sagar/Downloads/ee224_project/opcode_decoder.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:07:49 on Nov 20,2025
+# vcom -reportprogress 300 -93 -work work C:/Users/sagar/Downloads/ee224_project/opcode_decoder.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity opcode_decoder
+# -- Compiling architecture Behavioral of opcode_decoder
+# End time: 22:07:49 on Nov 20,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/sagar/Downloads/ee224_project/control_logic.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:07:49 on Nov 20,2025
+# vcom -reportprogress 300 -93 -work work C:/Users/sagar/Downloads/ee224_project/control_logic.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity control_logic
+# -- Compiling architecture Behavioral of control_logic
+# End time: 22:07:50 on Nov 20,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/sagar/Downloads/ee224_project/register_file.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:07:50 on Nov 20,2025
+# vcom -reportprogress 300 -93 -work work C:/Users/sagar/Downloads/ee224_project/register_file.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity Register_File
+# -- Compiling architecture Behavioral of Register_File
+# End time: 22:07:50 on Nov 20,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/sagar/Downloads/ee224_project/program_counter.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:07:50 on Nov 20,2025
+# vcom -reportprogress 300 -93 -work work C:/Users/sagar/Downloads/ee224_project/program_counter.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity program_counter
+# -- Compiling architecture Behavioral of program_counter
+# End time: 22:07:50 on Nov 20,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/sagar/Downloads/ee224_project/pc_update_logic.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:07:50 on Nov 20,2025
+# vcom -reportprogress 300 -93 -work work C:/Users/sagar/Downloads/ee224_project/pc_update_logic.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package NUMERIC_STD
+# -- Compiling entity pc_logic
+# -- Compiling architecture Behavioral of pc_logic
+# End time: 22:07:50 on Nov 20,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/sagar/Downloads/ee224_project/data_memory.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:07:51 on Nov 20,2025
+# vcom -reportprogress 300 -93 -work work C:/Users/sagar/Downloads/ee224_project/data_memory.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity data_memory
+# -- Compiling architecture Behavioral of data_memory
+# End time: 22:07:51 on Nov 20,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/sagar/Downloads/ee224_project/eight_bit_mux.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:07:51 on Nov 20,2025
+# vcom -reportprogress 300 -93 -work work C:/Users/sagar/Downloads/ee224_project/eight_bit_mux.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity eight_bit_mux
+# -- Compiling architecture struct of eight_bit_mux
+# End time: 22:07:51 on Nov 20,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/sagar/Downloads/ee224_project/six_bit_mux.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:07:51 on Nov 20,2025
+# vcom -reportprogress 300 -93 -work work C:/Users/sagar/Downloads/ee224_project/six_bit_mux.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity six_bit_mux
+# -- Compiling architecture struct of six_bit_mux
+# End time: 22:07:51 on Nov 20,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/sagar/Downloads/ee224_project/cpu.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:07:51 on Nov 20,2025
+# vcom -reportprogress 300 -93 -work work C:/Users/sagar/Downloads/ee224_project/cpu.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity cpu
+# -- Compiling architecture struct of cpu
+# -- Loading entity code_memory
+# -- Loading entity opcode_decoder
+# -- Loading entity control_logic
+# -- Loading entity Register_File
+# -- Loading entity eight_bit_mux
+# -- Loading entity alu
+# -- Loading entity flags_register
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading entity pc_logic
+# -- Loading entity six_bit_mux
+# -- Loading entity program_counter
+# -- Loading entity data_memory
+# End time: 22:07:52 on Nov 20,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# 
+# vcom -93 -work work {C:/Users/sagar/Downloads/ee224_project/alu.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:07:52 on Nov 20,2025
+# vcom -reportprogress 300 -93 -work work C:/Users/sagar/Downloads/ee224_project/alu.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity alu
+# -- Compiling architecture behavioral of alu
+# End time: 22:07:52 on Nov 20,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/sagar/Downloads/ee224_project/code_memory.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:07:52 on Nov 20,2025
+# vcom -reportprogress 300 -93 -work work C:/Users/sagar/Downloads/ee224_project/code_memory.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity code_memory
+# -- Compiling architecture Behavioral of code_memory
+# End time: 22:07:52 on Nov 20,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/sagar/Downloads/ee224_project/control_logic.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:07:52 on Nov 20,2025
+# vcom -reportprogress 300 -93 -work work C:/Users/sagar/Downloads/ee224_project/control_logic.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity control_logic
+# -- Compiling architecture Behavioral of control_logic
+# End time: 22:07:53 on Nov 20,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/sagar/Downloads/ee224_project/data_memory.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:07:53 on Nov 20,2025
+# vcom -reportprogress 300 -93 -work work C:/Users/sagar/Downloads/ee224_project/data_memory.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity data_memory
+# -- Compiling architecture Behavioral of data_memory
+# End time: 22:07:53 on Nov 20,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/sagar/Downloads/ee224_project/eight_bit_mux.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:07:53 on Nov 20,2025
+# vcom -reportprogress 300 -93 -work work C:/Users/sagar/Downloads/ee224_project/eight_bit_mux.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity eight_bit_mux
+# -- Compiling architecture struct of eight_bit_mux
+# End time: 22:07:53 on Nov 20,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/sagar/Downloads/ee224_project/flags_register.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:07:53 on Nov 20,2025
+# vcom -reportprogress 300 -93 -work work C:/Users/sagar/Downloads/ee224_project/flags_register.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity flags_register
+# -- Compiling architecture Behavioral of flags_register
+# End time: 22:07:53 on Nov 20,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/sagar/Downloads/ee224_project/opcode_decoder.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:07:53 on Nov 20,2025
+# vcom -reportprogress 300 -93 -work work C:/Users/sagar/Downloads/ee224_project/opcode_decoder.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity opcode_decoder
+# -- Compiling architecture Behavioral of opcode_decoder
+# End time: 22:07:54 on Nov 20,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/sagar/Downloads/ee224_project/pc_update_logic.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:07:54 on Nov 20,2025
+# vcom -reportprogress 300 -93 -work work C:/Users/sagar/Downloads/ee224_project/pc_update_logic.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package NUMERIC_STD
+# -- Compiling entity pc_logic
+# -- Compiling architecture Behavioral of pc_logic
+# End time: 22:07:54 on Nov 20,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/sagar/Downloads/ee224_project/program_counter.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:07:54 on Nov 20,2025
+# vcom -reportprogress 300 -93 -work work C:/Users/sagar/Downloads/ee224_project/program_counter.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity program_counter
+# -- Compiling architecture Behavioral of program_counter
+# End time: 22:07:54 on Nov 20,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/sagar/Downloads/ee224_project/register_file.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:07:54 on Nov 20,2025
+# vcom -reportprogress 300 -93 -work work C:/Users/sagar/Downloads/ee224_project/register_file.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity Register_File
+# -- Compiling architecture Behavioral of Register_File
+# End time: 22:07:54 on Nov 20,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/sagar/Downloads/ee224_project/six_bit_mux.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:07:55 on Nov 20,2025
+# vcom -reportprogress 300 -93 -work work C:/Users/sagar/Downloads/ee224_project/six_bit_mux.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity six_bit_mux
+# -- Compiling architecture struct of six_bit_mux
+# End time: 22:07:55 on Nov 20,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/sagar/Downloads/ee224_project/cpu.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:07:55 on Nov 20,2025
+# vcom -reportprogress 300 -93 -work work C:/Users/sagar/Downloads/ee224_project/cpu.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity cpu
+# -- Compiling architecture struct of cpu
+# -- Loading entity code_memory
+# -- Loading entity opcode_decoder
+# -- Loading entity control_logic
+# -- Loading entity Register_File
+# -- Loading entity eight_bit_mux
+# -- Loading entity alu
+# -- Loading entity flags_register
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading entity pc_logic
+# -- Loading entity six_bit_mux
+# -- Loading entity program_counter
+# -- Loading entity data_memory
+# End time: 22:07:55 on Nov 20,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/sagar/Downloads/ee224_project/cpu_tb.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:07:56 on Nov 20,2025
+# vcom -reportprogress 300 -93 -work work C:/Users/sagar/Downloads/ee224_project/cpu_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity cpu_tb
+# -- Compiling architecture Behavioral of cpu_tb
+# End time: 22:07:56 on Nov 20,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L fiftyfivenm -L rtl_work -L work -voptargs="+acc"  cpu_tb
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L fiftyfivenm -L rtl_work -L work -voptargs=""+acc"" cpu_tb 
+# Start time: 22:07:56 on Nov 20,2025
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.cpu_tb(behavioral)
+# Loading ieee.numeric_std(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.cpu(struct)
+# Loading work.code_memory(behavioral)
+# Loading work.opcode_decoder(behavioral)
+# Loading work.control_logic(behavioral)
+# Loading work.register_file(behavioral)
+# Loading work.eight_bit_mux(struct)
+# Loading work.alu(behavioral)
+# Loading work.flags_register(behavioral)
+# Loading work.pc_logic(behavioral)
+# Loading work.six_bit_mux(struct)
+# Loading work.program_counter(behavioral)
+# Loading work.data_memory(behavioral)
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# ** Note: Starting i281 CPU Simulation...
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_tb
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_tb/uut/dm
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_tb/uut/a
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_tb/uut/cm
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 2  Instance: /cpu_tb/uut/dm
+# ** Note: Reset Released. CPU Running...
+#    Time: 100 ns  Iteration: 0  Instance: /cpu_tb
+# ** Failure: Simulation Finished.
+#    Time: 5000100 ns  Iteration: 0  Process: /cpu_tb/stim_proc File: C:/Users/sagar/Downloads/ee224_project/cpu_tb.vhd
+# Break in Process stim_proc at C:/Users/sagar/Downloads/ee224_project/cpu_tb.vhd line 65
+# End time: 22:08:31 on Nov 20,2025, Elapsed time: 0:00:35
+# Errors: 0, Warnings: 4

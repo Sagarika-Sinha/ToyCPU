@@ -1,0 +1,93 @@
+`timescale 1ns/1ps
+
+module i281_cpu_tb;
+
+    // === Inputs to CPU ===
+    reg Board_Clock;
+    reg Direct_Video_Map;
+    reg [3:0] Register_View;
+    reg Auto_Clock;
+    reg Turbo_Mode;
+    reg Manual_Clock;
+    reg Reset_In;
+    reg [17:0] Switch_Input;
+    reg pin_name1, pin_name2, pin_name3, pin_name4, pin_name5, pin_name6;
+    reg REG2_ZERO, REG2_ONE;
+
+    // === Outputs from CPU ===
+    wire [7:0] HEX0, HEX1, HEX2, HEX3, HEX4, HEX5, HEX6, HEX7;
+
+    // Instantiate the CPU
+    i281_CPU uut (
+        .Board_Clock(Board_Clock),
+        .Direct_Video_Map(Direct_Video_Map),
+        .Register_View(Register_View),
+        .Auto_Clock(Auto_Clock),
+        .Turbo_Mode(Turbo_Mode),
+        .Manual_Clock(Manual_Clock),
+        .Reset_In(Reset_In),
+        .Switch_Input(Switch_Input),
+        .pin_name1(pin_name1),
+        .pin_name2(pin_name2),
+        .pin_name3(pin_name3),
+        .pin_name4(pin_name4),
+        .pin_name5(pin_name5),
+        .pin_name6(pin_name6),
+        .REG2_ZERO(REG2_ZERO),
+        .REG2_ONE(REG2_ONE),
+        .HEX0(HEX0),
+        .HEX1(HEX1),
+        .HEX2(HEX2),
+        .HEX3(HEX3),
+        .HEX4(HEX4),
+        .HEX5(HEX5),
+        .HEX6(HEX6),
+        .HEX7(HEX7)
+    );
+
+    // Clock generation (10ns period)
+    initial begin
+        Board_Clock = 0;
+        forever #5 Board_Clock = ~Board_Clock;
+    end
+
+    // Simulation control
+    initial begin
+        // Initialize inputs
+        Direct_Video_Map = 0;
+        Register_View = 4'b0000;
+        Auto_Clock = 0;
+        Turbo_Mode = 0;
+        Manual_Clock = 0;
+        Reset_In = 1;  // start with reset
+        Switch_Input = 18'b0;
+        pin_name1 = 0; pin_name2 = 0; pin_name3 = 0;
+        pin_name4 = 0; pin_name5 = 0; pin_name6 = 0;
+        REG2_ZERO = 0; REG2_ONE = 0;
+
+        // Hold reset for a few cycles
+        #20;
+        Reset_In = 0;
+        #20;
+        Reset_In = 1;
+
+        // Run simulation long enough to complete BubbleSort
+        #1000;
+
+        $display("Simulation finished");
+        $stop;
+    end
+
+    // Optional: dump waveforms
+    initial begin
+        $dumpfile("i281_cpu_tb.vcd");
+        $dumpvars(0, i281_cpu_tb);
+    end
+
+    // Optional: monitor key signals in console
+    initial begin
+        $monitor("Time=%0t | HEX7-HEX0: %h %h %h %h %h %h %h %h", 
+            $time, HEX7, HEX6, HEX5, HEX4, HEX3, HEX2, HEX1, HEX0);
+    end
+
+endmodule

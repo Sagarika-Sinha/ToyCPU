@@ -1,0 +1,198 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+-- This entity implements the opcode decoder based on the diagrams
+-- and the requirement for 27 total outputs (23 one-hot + 4 pass-through).
+--
+-- Input: 8-bit opcode from instruction memory (I[15]..I[8])
+--
+-- 23 One-Hot Outputs:
+--   - o_NOOP, o_MOVE, o_LOADI_LOADP, o_ADD, o_ADDI, o_SUB, o_SUBI,
+--   - o_LOAD, o_STORE, o_STOREF, o_JUMP
+--   - o_LOADF (assigned to unused primary opcode 1100)
+--   - o_CMP (assigned to unused primary opcode 1111)
+--   - o_INPUTC, o_INPUTCF, o_INPUTD, o_INPUTDF (from group "0001")
+--   - o_SHIFTL, o_SHIFTR (from group "1001")
+--   - o_BRE_BRZ, o_BRNE_BRNZ, o_BRG, o_BRGE (from group "1101")
+--
+-- 4 Pass-Through Outputs:
+--   - o_X1 (from I[11]), o_X0 (from I[10]), o_Y1 (from I[9]), o_Y0 (from I[8])
+
+entity OpcodeDecoder_27_Output is
+    port (
+        -- Input: 8-bit opcode from instruction memory (I[15]..I[8])
+        opcode_in     : in  std_logic_vector(7 downto 0); 
+
+        -- 4 Pass-through Outputs (from I[11]..I[8])
+        o_X1          : out std_logic;
+        o_X0          : out std_logic;
+        o_Y1          : out std_logic;
+        o_Y0          : out std_logic;
+
+        -- 23 One-Hot Encoded Instruction Outputs
+        o_NOOP        : out std_logic;
+        o_INPUTC      : out std_logic;
+        o_INPUTCF     : out std_logic;
+        o_INPUTD      : out std_logic;
+        o_INPUTDF     : out std_logic;
+        o_MOVE        : out std_logic;
+        o_LOADI_LOADP : out std_logic;
+        o_ADD         : out std_logic;
+        o_ADDI        : out std_logic;
+        o_SUB         : out std_logic;
+        o_SUBI        : out std_logic;
+        o_LOAD        : out std_logic;
+        o_LOADF       : out std_logic; -- From unused opcode 1100
+        o_STORE       : out std_logic;
+        o_STOREF      : out std_logic;
+        o_SHIFTL      : out std_logic;
+        o_SHIFTR      : out std_logic;
+        o_CMP         : out std_logic; -- From unused opcode 1111
+        o_JUMP        : out std_logic;
+        o_BRE_BRZ     : out std_logic;
+        o_BRNE_BRNZ   : out std_logic;
+        o_BRG         : out std_logic;
+        o_BRGE        : out std_logic
+    );
+end entity OpcodeDecoder_27_Output;
+
+architecture Behavioral of OpcodeDecoder_27_Output is
+    -- Internal signals for clarity
+    signal primary_opcode   : std_logic_vector(3 downto 0);
+    signal secondary_bits : std_logic_vector(3 downto 0);
+begin
+
+    -- Map the 8-bit input to its logical parts
+    primary_opcode   <= opcode_in(7 downto 4); -- I[15..12]
+    secondary_bits   <= opcode_in(3 downto 0); -- I[11..8]
+
+    -- Logic for the 4 pass-through outputs.
+    -- These are simple concurrent assignments that map I[11..8].
+    o_X1 <= secondary_bits(3); -- Maps to I[11]
+    o_X0 <= secondary_bits(2); -- Maps to I[10]
+    o_Y1 <= secondary_bits(1); -- Maps to I[9]
+    o_Y0 <= secondary_bits(0); -- Maps to I[8]
+
+    -- This process describes the combinational logic for the 23 one-hot outputs
+    process(primary_opcode, secondary_bits)
+    begin
+        -- Start by setting all 23 one-hot outputs to '0' (inactive).
+        o_NOOP        <= '0';
+        o_INPUTC      <= '0';
+        o_INPUTCF     <= '0';
+        o_INPUTD      <= '0';
+        o_INPUTDF     <= '0';
+        o_MOVE        <= '0';
+        o_LOADI_LOADP <= '0';
+        o_ADD         <= '0';
+        o_ADDI        <= '0';
+        o_SUB         <= '0';
+        o_SUBI        <= '0';
+        o_LOAD        <= '0';
+        o_LOADF       <= '0';
+        o_STORE       <= '0';
+        o_STOREF      <= '0';
+        o_SHIFTL      <= '0';
+        o_SHIFTR      <= '0';
+        o_CMP         <= '0';
+        o_JUMP        <= '0';
+        o_BRE_BRZ     <= '0';
+        o_BRNE_BRNZ   <= '0';
+        o_BRG         <= '0';
+        o_BRGE        <= '0';
+
+        -- This CASE statement implements the 4-to-16 primary decoder
+        -- based on the primary_opcode (I[15..12])
+        case primary_opcode is
+        
+            -- Y0: NOOP
+            when "0000" => 
+                o_NOOP <= '1';
+            
+            -- Y1: "INPUT" group
+            when "0001" => 
+                -- Nested 2-to-4 decoder using secondary_bits(1 downto 0) (I[9..8])
+                case secondary_bits(1 downto 0) is
+                    when "00" => o_INPUTC  <= '1';
+                    when "01" => o_INPUTCF <= '1';
+                    when "10" => o_INPUTD  <= '1';
+                    when "11" => o_INPUTDF <= '1';
+                    when others => null;
+                end case;
+
+            -- Y2: MOVE
+            when "0010" =>
+                o_MOVE <= '1';
+
+            -- Y3: LOADI/LOADP
+            when "0011" =>
+                o_LOADI_LOADP <= '1';
+
+            -- Y4: ADD
+            when "0100" =>
+                o_ADD <= '1';
+
+            -- Y5: ADDI
+            when "0101" =>
+                o_ADDI <= '1';
+
+            -- Y6: SUB
+            when "0110" =>
+                o_SUB <= '1';
+
+            -- Y7: SUBI
+            when "0111" =>
+                o_SUBI <= '1';
+
+            -- Y8: LOAD
+            when "1000" =>
+                o_LOAD <= '1';
+
+            -- Y9: "SHIFT" group
+            when "1001" =>
+                -- Nested 1-to-2 decoder using secondary_bits(0) (I[8])
+                case secondary_bits(0) is
+                    when '0' => o_SHIFTL <= '1';
+                    when '1' => o_SHIFTR <= '1';
+                    when others => null;
+                end case;
+
+            -- Y10: STORE
+            when "1010" =>
+                o_STORE <= '1';
+
+            -- Y11: STOREF
+            when "1011" =>
+                o_STOREF <= '1';
+
+            -- Y12: Assigned to LOADF (based on 23-instruction requirement)
+            when "1100" =>
+                o_LOADF <= '1';
+
+            -- Y13: "BRANCH" group
+            when "1101" =>
+                -- Nested 2-to-4 decoder using secondary_bits(1 downto 0) (I[9..8])
+                case secondary_bits(1 downto 0) is
+                    when "00" => o_BRE_BRZ   <= '1';
+                    when "01" => o_BRNE_BRNZ <= '1';
+                    when "10" => o_BRG       <= '1';
+                    when "11" => o_BRGE      <= '1';
+                    when others => null;
+                end case;
+
+            -- Y14: JUMP
+            when "1110" =>
+                o_JUMP <= '1';
+
+            -- Y15: Assigned to CMP (based on 23-instruction requirement)
+            when "1111" =>
+                o_CMP <= '1';
+
+            -- Default case
+            when others => 
+                null; -- All 23 one-hot outputs remain '0'
+        
+        end case;
+    end process;
+
+end architecture Behavioral;

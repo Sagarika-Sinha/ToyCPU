@@ -1,0 +1,199 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+--------------------------------------------------------------------------------
+-- ENTITY: Control
+--
+-- This block implements the main combinational logic for the i281 CPU.
+-- It receives pre-decoded instruction signals (y0-y22), register
+-- fields (y23-y26), and status flags.
+--
+-- It generates the 18 control signals (c1-c18) for the datapath.
+--
+-- This entity corresponds to the "Control" block highlighted in red
+-- in the i281 CPU datapath diagram.
+--------------------------------------------------------------------------------
+entity Control is
+    port (
+        -- === INPUTS ===
+        
+        -- 23 "one-hot" instruction select lines from OpCode Decoder (y0-y22)
+        Inst_Select_Y : in  std_logic_vector(22 downto 0); 
+        
+        -- 4 register field lines from OpCode Decoder (y23-y26)
+        -- We assume:
+        -- Reg_Fields_Y(3) = y23 = X1
+        -- Reg_Fields_Y(2) = y24 = X0
+        -- Reg_Fields_Y(1) = y25 = Y1
+        -- Reg_Fields_Y(0) = y26 = Y0
+        Reg_Fields_Y  : in  std_logic_vector(3 downto 0); 
+        
+        -- 4-bit status flags from the Flags register
+        -- We assume: Flags(2)=ZF, Flags(1)=NF, Flags(0)=OF
+        Flags         : in  std_logic_vector(3 downto 0); 
+
+        -- === OUTPUTS (Control Signals c1 to c18) ===
+        c1  : out std_logic; -- IMEM_WRITE_ENABLE
+        c2  : out std_logic; -- PROGRAM_COUNTER_MUX
+        c3  : out std_logic; -- PROGRAM_COUNTER_SELECT1
+        c4  : out std_logic; -- REGISTERS_PORTB_SELECT1
+        c5  : out std_logic; -- REGISTERS_PORTA_SELECT1
+        c6  : out std_logic; -- REGISTERS_PORTB_SELECT0
+        c7  : out std_logic; -- REGISTERS_PORTA_SELECT0
+        c8  : out std_logic; -- REGISTERS_WRITE_SELECT1
+        c9  : out std_logic; -- REGISTERS_WRITE_SELECT0
+        c10 : out std_logic; -- REGISTERS_WRITE_ENABLE
+        c11 : out std_logic; -- ALU_SOURCE_MUX
+        c12 : out std_logic; -- ALU_SELECT1
+        c13 : out std_logic; -- ALU_SELECT0
+        c14 : out std_logic; -- FLAGS_WRITE_ENABLE
+        c15 : out std_logic; -- ALU_RESULT_MUX
+        c16 : out std_logic; -- DMEM_INPUT_MUX
+        c17 : out std_logic; -- DMEM_WRITE_ENABLE
+        c18 : out std_logic  -- REG_WRITEBACK_MUX
+    );
+end entity Control;
+
+--------------------------------------------------------------------------------
+-- ARCHITECTURE: Behavioral
+--
+-- This architecture uses concurrent signal assignments to implement
+-- the sum-of-products logic for each control signal (c1-c18).
+--------------------------------------------------------------------------------
+architecture Behavioral of Control is
+
+    -- === Internal Signals for Readability ===
+
+    -- 1. Instruction Aliases (y0 - y22)
+    signal is_NOOP        : std_logic;
+    signal is_INPUTC      : std_logic;
+    signal is_INPUTC_F    : std_logic;
+    signal is_INPUTD      : std_logic;
+    signal is_INPUTD_F    : std_logic;
+    signal is_MOVE       : std_logic;
+    signal is_LOADI_LOADP : std_logic;
+    signal is_ADD        : std_logic;
+    signal is_ADDI       : std_logic;
+    signal is_SUB        : std_logic;
+    signal is_SUBI       : std_logic;
+    signal is_LOAD       : std_logic;
+    signal is_LOADF      : std_logic;
+    signal is_STORE      : std_logic;
+    signal is_STOREF     : std_logic;
+    signal is_SHIFTL     : std_logic;
+    signal is_SHIFTR     : std_logic;
+    signal is_CMP        : std_logic;
+    signal is_JUMP       : std_logic;
+    signal is_BRE_BRZ    : std_logic;
+    signal is_BRNE_BRNZ  : std_logic;
+    signal is_BRG        : std_logic;
+    signal is_BRGE       : std_logic;
+
+    -- 2. Register Field Aliases (y23 - y26)
+    signal X1, X0, Y1, Y0 : std_logic;
+
+    -- 3. Flag Aliases
+    signal ZF, NF, OF     : std_logic;
+
+    -- 4. Branch Condition Logic
+    signal B1, B2, B3, B4 : std_logic;
+
+begin
+
+    -- === Concurrent Alias Assignments ===
+
+    -- Map instruction select inputs (y0-y22) to named signals
+    is_NOOP        <= Inst_Select_Y(0);
+    is_INPUTC      <= Inst_Select_Y(1);
+    is_INPUTC_F    <= Inst_Select_Y(2);
+    is_INPUTD      <= Inst_Select_Y(3);
+    is_INPUTD_F    <= Inst_Select_Y(4);
+    is_MOVE        <= Inst_Select_Y(5);
+    is_LOADI_LOADP <= Inst_Select_Y(6);
+    is_ADD         <= Inst_Select_Y(7);
+    is_ADDI        <= Inst_Select_Y(8);
+    is_SUB         <= Inst_Select_Y(9);
+    is_SUBI        <= Inst_Select_Y(10);
+    is_LOAD        <= Inst_Select_Y(11);
+    is_LOADF       <= Inst_Select_Y(12);
+    is_STORE       <= Inst_Select_Y(13);
+    is_STOREF      <= Inst_Select_Y(14);
+    is_SHIFTL      <= Inst_Select_Y(15);
+    is_SHIFTR      <= Inst_Select_Y(16);
+    is_CMP         <= Inst_Select_Y(17);
+    is_JUMP        <= Inst_Select_Y(18);
+    is_BRE_BRZ     <= Inst_Select_Y(19);
+    is_BRNE_BRNZ   <= Inst_Select_Y(20);
+    is_BRG         <= Inst_Select_Y(21);
+    is_BRGE        <= Inst_Select_Y(22);
+
+    -- Map register field inputs (y23-y26)
+    X1 <= Reg_Fields_Y(3); -- y23
+    X0 <= Reg_Fields_Y(2); -- y24
+    Y1 <= Reg_Fields_Y(1); -- y25
+    Y0 <= Reg_Fields_Y(0); -- y26
+
+    -- Map individual flags
+    ZF <= Flags(2);
+    NF <= Flags(1);
+    OF <= Flags(0);
+    
+    -- === Concurrent Logic Calculations ===
+    
+    -- Calculate Branch Conditions
+    B1 <= ZF;                             -- B1 = ZF
+    B2 <= not ZF;                         -- B2 = ~ZF
+    B3 <= (not ZF) and (not (NF xor OF)); -- B3 = ~ZF AND (NF XNOR OF)
+    B4 <= not (NF xor OF);                -- B4 = NF XNOR OF
+
+    -- Generate Control Signals (c1-c18)
+    -- Each signal is a combinational "OR" of the conditions that set it high.
+    
+    c1 <= is_INPUTC or is_INPUTC_F or is_INPUTD or is_INPUTD_F or is_CMP or
+          is_JUMP or is_BRE_BRZ or is_BRNE_BRNZ or is_BRG or is_BRGE;
+
+    c2 <= '1'; -- c2 is '1' for all listed instructions in the table.
+
+    c3 <= is_JUMP or (is_BRE_BRZ and B1) or (is_BRNE_BRNZ and B2) or 
+          (is_BRG and B3) or (is_BRGE and B4);
+          
+    c4 <= (is_INPUTC_F or is_INPUTD_F or is_ADD or is_ADDI or is_SUB or 
+           is_SUBI or is_STORE or is_SHIFTL or is_SHIFTR or is_CMP) and X1;
+
+    c5 <= (is_MOVE or is_ADD or is_SUB or is_LOADF or is_STOREF or is_CMP) and Y1;
+
+    c6 <= (is_INPUTC_F or is_INPUTD_F or is_ADD or is_ADDI or is_SUB or 
+           is_SUBI or is_STORE or is_SHIFTL or is_SHIFTR or is_CMP) and X0;
+
+    c7 <= (is_MOVE or is_ADD or is_SUB or is_LOADF or is_STOREF or is_CMP) and Y0;
+
+    c8 <= (is_MOVE or is_LOADI_LOADP or is_ADD or is_ADDI or is_SUB or 
+           is_SUBI or is_LOAD or is_LOADF or is_SHIFTL or is_SHIFTR) and X1;
+           
+    c9 <= (is_MOVE or is_LOADI_LOADP or is_ADD or is_ADDI or is_SUB or 
+           is_SUBI or is_LOAD or is_LOADF or is_SHIFTL or is_SHIFTR) and X0;
+           
+    c10 <= is_MOVE or is_LOADI_LOADP or is_ADD or is_ADDI or is_SUB or 
+           is_SUBI or is_LOAD or is_LOADF or is_SHIFTL or is_SHIFTR;
+
+    c11 <= is_INPUTC_F or is_INPUTD_F or is_MOVE or is_ADD or is_SUB or 
+           is_LOADF or is_STOREF or is_CMP;
+
+    c12 <= is_INPUTC_F or is_INPUTD_F or is_MOVE or is_SUB or is_SUBI or 
+           is_LOADF or is_SHIFTR or is_CMP;
+           
+    c13 <= is_INPUTC_F or is_INPUTD_F or is_MOVE or is_ADD or is_ADDI or 
+           is_SHIFTR;
+           
+    c14 <= is_ADD or is_ADDI or is_SUB or is_SUBI or is_SHIFTL or is_SHIFTR or
+           is_CMP;
+           
+    c15 <= is_INPUTC or is_LOADI_LOADP or is_LOAD or is_LOADF;
+    
+    c16 <= is_INPUTD or is_INPUTD_F or is_STORE or is_STOREF;
+
+    c17 <= is_INPUTC or is_INPUTD or is_INPUTD_F or is_STORE or is_STOREF;
+    
+    c18 <= is_LOAD or is_LOADF;
+
+end architecture Behavioral;

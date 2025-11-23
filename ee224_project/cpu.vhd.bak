@@ -1,0 +1,51 @@
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
+USE IEEE.NUMERIC_STD.ALL;
+
+ENTITY code_memory_asynchronous IS
+    PORT (
+        we         : IN  STD_LOGIC;                          -- Write Enable (from c_1)
+        addr_read  : IN  STD_LOGIC_VECTOR(5 DOWNTO 0);   -- Read Address (from PC)
+        addr_write : IN  STD_LOGIC_VECTOR(5 DOWNTO 0);   -- Write Address (from Switches)
+        data_in    : IN  STD_LOGIC_VECTOR(15 DOWNTO 0);  -- Data In (from Switches)
+        data_out   : OUT STD_LOGIC_VECTOR(15 DOWNTO 0)   -- Data Out (to Decoder/PC Logic)
+    );
+END ENTITY code_memory_asynchronous;
+
+ARCHITECTURE behavioral OF code_memory_asynchronous IS
+
+    -- Define the memory array type: 64 words of 16 bits each.
+    TYPE mem_array IS ARRAY (0 TO 63) OF STD_LOGIC_VECTOR(15 DOWNTO 0);
+    
+    -- Instantiate the memory.
+    SIGNAL memory : mem_array;
+
+BEGIN
+
+    -- Asynchronous Write Process
+    -- This process is sensitive to the write enable and all write inputs.
+    -- This specific structure infers 64 rows of 16-bit latches.
+    write_proc : PROCESS (we, addr_write, data_in)
+        VARIABLE write_index : INTEGER RANGE 0 TO 63;
+    BEGIN
+        write_index := to_integer(unsigned(addr_write));
+        
+        IF (we = '1') THEN
+            -- When 'we' is high, the data_in flows through to the
+            -- selected memory location, like a transparent latch.
+            memory(write_index) <= data_in;
+        END IF;
+        -- When 'we' = '0', the memory(write_index) "holds" its
+        -- previous value, which is the definition of a latch.
+        
+    END PROCESS write_proc;
+
+
+    -- Asynchronous Read
+    -- This is a concurrent assignment, making it purely combinational.
+    -- The output 'data_out' is *always* equal to the contents of 'memory'
+    -- at the location specified by 'addr_read'.
+    data_out <= memory(to_integer(unsigned(addr_read)));
+
+
+END ARCHITECTURE behavioral;

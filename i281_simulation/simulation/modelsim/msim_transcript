@@ -1,0 +1,625 @@
+# Reading C:/intelFPGA_lite/18.1/modelsim_ase/tcl/vsim/pref.tcl
+# do i281_cpu_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/18.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+Y:/Documents/GitHub/ToyCPU/i281_simulation {Y:/Documents/GitHub/ToyCPU/i281_simulation/seven_seg_decoder_BUSOUT.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:17:56 on Nov 19,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+Y:/Documents/GitHub/ToyCPU/i281_simulation" Y:/Documents/GitHub/ToyCPU/i281_simulation/seven_seg_decoder_BUSOUT.v 
+# -- Compiling module seven_seg_decoder_BUSOUT
+# 
+# Top level modules:
+# 	seven_seg_decoder_BUSOUT
+# End time: 14:17:56 on Nov 19,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+Y:/Documents/GitHub/ToyCPU/i281_simulation {Y:/Documents/GitHub/ToyCPU/i281_simulation/ONES.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:17:56 on Nov 19,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+Y:/Documents/GitHub/ToyCPU/i281_simulation" Y:/Documents/GitHub/ToyCPU/i281_simulation/ONES.v 
+# -- Compiling module ONES
+# 
+# Top level modules:
+# 	ONES
+# End time: 14:17:56 on Nov 19,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+Y:/Documents/GitHub/ToyCPU/i281_simulation {Y:/Documents/GitHub/ToyCPU/i281_simulation/BIOS_Hardcoded_Low.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:17:56 on Nov 19,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+Y:/Documents/GitHub/ToyCPU/i281_simulation" Y:/Documents/GitHub/ToyCPU/i281_simulation/BIOS_Hardcoded_Low.v 
+# -- Compiling module BIOS_Hardcoded_Low
+# 
+# Top level modules:
+# 	BIOS_Hardcoded_Low
+# End time: 14:17:57 on Nov 19,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+Y:/Documents/GitHub/ToyCPU/i281_simulation {Y:/Documents/GitHub/ToyCPU/i281_simulation/BIOS_Hardcoded_High.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:17:57 on Nov 19,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+Y:/Documents/GitHub/ToyCPU/i281_simulation" Y:/Documents/GitHub/ToyCPU/i281_simulation/BIOS_Hardcoded_High.v 
+# -- Compiling module BIOS_Hardcoded_High
+# 
+# Top level modules:
+# 	BIOS_Hardcoded_High
+# End time: 14:17:57 on Nov 19,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+Y:/Documents/GitHub/ToyCPU/i281_simulation {Y:/Documents/GitHub/ToyCPU/i281_simulation/User_Data.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:17:57 on Nov 19,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+Y:/Documents/GitHub/ToyCPU/i281_simulation" Y:/Documents/GitHub/ToyCPU/i281_simulation/User_Data.v 
+# -- Compiling module User_Data
+# 
+# Top level modules:
+# 	User_Data
+# End time: 14:17:57 on Nov 19,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+Y:/Documents/GitHub/ToyCPU/i281_simulation {Y:/Documents/GitHub/ToyCPU/i281_simulation/User_Code_Low.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:17:57 on Nov 19,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+Y:/Documents/GitHub/ToyCPU/i281_simulation" Y:/Documents/GitHub/ToyCPU/i281_simulation/User_Code_Low.v 
+# -- Compiling module User_Code_Low
+# 
+# Top level modules:
+# 	User_Code_Low
+# End time: 14:17:57 on Nov 19,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+Y:/Documents/GitHub/ToyCPU/i281_simulation {Y:/Documents/GitHub/ToyCPU/i281_simulation/User_Code_High.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:17:57 on Nov 19,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+Y:/Documents/GitHub/ToyCPU/i281_simulation" Y:/Documents/GitHub/ToyCPU/i281_simulation/User_Code_High.v 
+# -- Compiling module User_Code_High
+# 
+# Top level modules:
+# 	User_Code_High
+# End time: 14:17:57 on Nov 19,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+Y:/Documents/GitHub/ToyCPU/i281_simulation {Y:/Documents/GitHub/ToyCPU/i281_simulation/16Wide4To1BusMux.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:17:57 on Nov 19,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+Y:/Documents/GitHub/ToyCPU/i281_simulation" Y:/Documents/GitHub/ToyCPU/i281_simulation/16Wide4To1BusMux.v 
+# -- Compiling module \16Wide4To1BusMux 
+# 
+# Top level modules:
+# 	\16Wide4To1BusMux 
+# End time: 14:17:57 on Nov 19,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+Y:/Documents/GitHub/ToyCPU/i281_simulation {Y:/Documents/GitHub/ToyCPU/i281_simulation/4x8BitRegisters.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:17:57 on Nov 19,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+Y:/Documents/GitHub/ToyCPU/i281_simulation" Y:/Documents/GitHub/ToyCPU/i281_simulation/4x8BitRegisters.v 
+# -- Compiling module \4x8BitRegisters 
+# 
+# Top level modules:
+# 	\4x8BitRegisters 
+# End time: 14:17:58 on Nov 19,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+Y:/Documents/GitHub/ToyCPU/i281_simulation {Y:/Documents/GitHub/ToyCPU/i281_simulation/4WideBusMux.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:17:58 on Nov 19,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+Y:/Documents/GitHub/ToyCPU/i281_simulation" Y:/Documents/GitHub/ToyCPU/i281_simulation/4WideBusMux.v 
+# -- Compiling module \4WideBusMux 
+# 
+# Top level modules:
+# 	\4WideBusMux 
+# End time: 14:17:58 on Nov 19,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+Y:/Documents/GitHub/ToyCPU/i281_simulation {Y:/Documents/GitHub/ToyCPU/i281_simulation/4to16DecoderWithEnable.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:17:58 on Nov 19,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+Y:/Documents/GitHub/ToyCPU/i281_simulation" Y:/Documents/GitHub/ToyCPU/i281_simulation/4to16DecoderWithEnable.v 
+# -- Compiling module \4to16DecoderWithEnable 
+# 
+# Top level modules:
+# 	\4to16DecoderWithEnable 
+# End time: 14:17:58 on Nov 19,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+Y:/Documents/GitHub/ToyCPU/i281_simulation {Y:/Documents/GitHub/ToyCPU/i281_simulation/2to4DecoderWithEnable.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:17:58 on Nov 19,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+Y:/Documents/GitHub/ToyCPU/i281_simulation" Y:/Documents/GitHub/ToyCPU/i281_simulation/2to4DecoderWithEnable.v 
+# -- Compiling module \2to4DecoderWithEnable 
+# 
+# Top level modules:
+# 	\2to4DecoderWithEnable 
+# End time: 14:17:58 on Nov 19,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+Y:/Documents/GitHub/ToyCPU/i281_simulation {Y:/Documents/GitHub/ToyCPU/i281_simulation/2BitDecoderWithEnable.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:17:58 on Nov 19,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+Y:/Documents/GitHub/ToyCPU/i281_simulation" Y:/Documents/GitHub/ToyCPU/i281_simulation/2BitDecoderWithEnable.v 
+# -- Compiling module \2BitDecoderWithEnable 
+# 
+# Top level modules:
+# 	\2BitDecoderWithEnable 
+# End time: 14:17:58 on Nov 19,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+Y:/Documents/GitHub/ToyCPU/i281_simulation {Y:/Documents/GitHub/ToyCPU/i281_simulation/1to2DecoderWithEnable.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:17:58 on Nov 19,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+Y:/Documents/GitHub/ToyCPU/i281_simulation" Y:/Documents/GitHub/ToyCPU/i281_simulation/1to2DecoderWithEnable.v 
+# -- Compiling module \1to2DecoderWithEnable 
+# 
+# Top level modules:
+# 	\1to2DecoderWithEnable 
+# End time: 14:17:58 on Nov 19,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+Y:/Documents/GitHub/ToyCPU/i281_simulation {Y:/Documents/GitHub/ToyCPU/i281_simulation/SixteenWideBusMux.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:17:58 on Nov 19,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+Y:/Documents/GitHub/ToyCPU/i281_simulation" Y:/Documents/GitHub/ToyCPU/i281_simulation/SixteenWideBusMux.v 
+# -- Compiling module SixteenWideBusMux
+# 
+# Top level modules:
+# 	SixteenWideBusMux
+# End time: 14:17:58 on Nov 19,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+Y:/Documents/GitHub/ToyCPU/i281_simulation {Y:/Documents/GitHub/ToyCPU/i281_simulation/ShiftNoDff.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:17:59 on Nov 19,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+Y:/Documents/GitHub/ToyCPU/i281_simulation" Y:/Documents/GitHub/ToyCPU/i281_simulation/ShiftNoDff.v 
+# -- Compiling module ShiftNoDff
+# 
+# Top level modules:
+# 	ShiftNoDff
+# End time: 14:17:59 on Nov 19,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+Y:/Documents/GitHub/ToyCPU/i281_simulation {Y:/Documents/GitHub/ToyCPU/i281_simulation/Registers16bit.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:17:59 on Nov 19,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+Y:/Documents/GitHub/ToyCPU/i281_simulation" Y:/Documents/GitHub/ToyCPU/i281_simulation/Registers16bit.v 
+# -- Compiling module Registers16bit
+# 
+# Top level modules:
+# 	Registers16bit
+# End time: 14:17:59 on Nov 19,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+Y:/Documents/GitHub/ToyCPU/i281_simulation {Y:/Documents/GitHub/ToyCPU/i281_simulation/Registers8bit.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:17:59 on Nov 19,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+Y:/Documents/GitHub/ToyCPU/i281_simulation" Y:/Documents/GitHub/ToyCPU/i281_simulation/Registers8bit.v 
+# -- Compiling module Registers8bit
+# 
+# Top level modules:
+# 	Registers8bit
+# End time: 14:17:59 on Nov 19,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+Y:/Documents/GitHub/ToyCPU/i281_simulation {Y:/Documents/GitHub/ToyCPU/i281_simulation/ReadOnly_16x16_Register_File_Low.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:17:59 on Nov 19,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+Y:/Documents/GitHub/ToyCPU/i281_simulation" Y:/Documents/GitHub/ToyCPU/i281_simulation/ReadOnly_16x16_Register_File_Low.v 
+# -- Compiling module ReadOnly_16x16_Register_File_Low
+# 
+# Top level modules:
+# 	ReadOnly_16x16_Register_File_Low
+# End time: 14:17:59 on Nov 19,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+Y:/Documents/GitHub/ToyCPU/i281_simulation {Y:/Documents/GitHub/ToyCPU/i281_simulation/ReadOnly_16x16_Register_File_High.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:17:59 on Nov 19,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+Y:/Documents/GitHub/ToyCPU/i281_simulation" Y:/Documents/GitHub/ToyCPU/i281_simulation/ReadOnly_16x16_Register_File_High.v 
+# -- Compiling module ReadOnly_16x16_Register_File_High
+# 
+# Top level modules:
+# 	ReadOnly_16x16_Register_File_High
+# End time: 14:17:59 on Nov 19,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+Y:/Documents/GitHub/ToyCPU/i281_simulation {Y:/Documents/GitHub/ToyCPU/i281_simulation/ProgramCounter.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:17:59 on Nov 19,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+Y:/Documents/GitHub/ToyCPU/i281_simulation" Y:/Documents/GitHub/ToyCPU/i281_simulation/ProgramCounter.v 
+# -- Compiling module ProgramCounter
+# 
+# Top level modules:
+# 	ProgramCounter
+# End time: 14:17:59 on Nov 19,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+Y:/Documents/GitHub/ToyCPU/i281_simulation {Y:/Documents/GitHub/ToyCPU/i281_simulation/Opcode_Decoder.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:17:59 on Nov 19,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+Y:/Documents/GitHub/ToyCPU/i281_simulation" Y:/Documents/GitHub/ToyCPU/i281_simulation/Opcode_Decoder.v 
+# -- Compiling module Opcode_Decoder
+# 
+# Top level modules:
+# 	Opcode_Decoder
+# End time: 14:18:00 on Nov 19,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+Y:/Documents/GitHub/ToyCPU/i281_simulation {Y:/Documents/GitHub/ToyCPU/i281_simulation/IMEM_low.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:18:00 on Nov 19,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+Y:/Documents/GitHub/ToyCPU/i281_simulation" Y:/Documents/GitHub/ToyCPU/i281_simulation/IMEM_low.v 
+# -- Compiling module IMEM_low
+# 
+# Top level modules:
+# 	IMEM_low
+# End time: 14:18:00 on Nov 19,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+Y:/Documents/GitHub/ToyCPU/i281_simulation {Y:/Documents/GitHub/ToyCPU/i281_simulation/IMEM_high.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:18:00 on Nov 19,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+Y:/Documents/GitHub/ToyCPU/i281_simulation" Y:/Documents/GitHub/ToyCPU/i281_simulation/IMEM_high.v 
+# -- Compiling module IMEM_high
+# 
+# Top level modules:
+# 	IMEM_high
+# End time: 14:18:00 on Nov 19,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+Y:/Documents/GitHub/ToyCPU/i281_simulation {Y:/Documents/GitHub/ToyCPU/i281_simulation/IMEM.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:18:00 on Nov 19,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+Y:/Documents/GitHub/ToyCPU/i281_simulation" Y:/Documents/GitHub/ToyCPU/i281_simulation/IMEM.v 
+# -- Compiling module IMEM
+# 
+# Top level modules:
+# 	IMEM
+# End time: 14:18:00 on Nov 19,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+Y:/Documents/GitHub/ToyCPU/i281_simulation {Y:/Documents/GitHub/ToyCPU/i281_simulation/FullAdder.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:18:00 on Nov 19,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+Y:/Documents/GitHub/ToyCPU/i281_simulation" Y:/Documents/GitHub/ToyCPU/i281_simulation/FullAdder.v 
+# -- Compiling module FullAdder
+# 
+# Top level modules:
+# 	FullAdder
+# End time: 14:18:00 on Nov 19,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+Y:/Documents/GitHub/ToyCPU/i281_simulation {Y:/Documents/GitHub/ToyCPU/i281_simulation/Flag_Registers.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:18:00 on Nov 19,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+Y:/Documents/GitHub/ToyCPU/i281_simulation" Y:/Documents/GitHub/ToyCPU/i281_simulation/Flag_Registers.v 
+# -- Compiling module Flag_Registers
+# 
+# Top level modules:
+# 	Flag_Registers
+# End time: 14:18:00 on Nov 19,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+Y:/Documents/GitHub/ToyCPU/i281_simulation {Y:/Documents/GitHub/ToyCPU/i281_simulation/DMEM.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:18:00 on Nov 19,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+Y:/Documents/GitHub/ToyCPU/i281_simulation" Y:/Documents/GitHub/ToyCPU/i281_simulation/DMEM.v 
+# -- Compiling module DMEM
+# 
+# Top level modules:
+# 	DMEM
+# End time: 14:18:01 on Nov 19,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+Y:/Documents/GitHub/ToyCPU/i281_simulation {Y:/Documents/GitHub/ToyCPU/i281_simulation/Clock_dividers.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:18:01 on Nov 19,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+Y:/Documents/GitHub/ToyCPU/i281_simulation" Y:/Documents/GitHub/ToyCPU/i281_simulation/Clock_dividers.v 
+# -- Compiling module Clock_dividers
+# 
+# Top level modules:
+# 	Clock_dividers
+# End time: 14:18:01 on Nov 19,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+Y:/Documents/GitHub/ToyCPU/i281_simulation {Y:/Documents/GitHub/ToyCPU/i281_simulation/Clock_divider_4_16_and_64.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:18:01 on Nov 19,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+Y:/Documents/GitHub/ToyCPU/i281_simulation" Y:/Documents/GitHub/ToyCPU/i281_simulation/Clock_divider_4_16_and_64.v 
+# -- Compiling module Clock_divider_4_16_and_64
+# 
+# Top level modules:
+# 	Clock_divider_4_16_and_64
+# End time: 14:18:01 on Nov 19,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+Y:/Documents/GitHub/ToyCPU/i281_simulation {Y:/Documents/GitHub/ToyCPU/i281_simulation/Clock_divider_512.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:18:01 on Nov 19,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+Y:/Documents/GitHub/ToyCPU/i281_simulation" Y:/Documents/GitHub/ToyCPU/i281_simulation/Clock_divider_512.v 
+# -- Compiling module Clock_divider_512
+# 
+# Top level modules:
+# 	Clock_divider_512
+# End time: 14:18:01 on Nov 19,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+Y:/Documents/GitHub/ToyCPU/i281_simulation {Y:/Documents/GitHub/ToyCPU/i281_simulation/6bitAdder.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:18:01 on Nov 19,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+Y:/Documents/GitHub/ToyCPU/i281_simulation" Y:/Documents/GitHub/ToyCPU/i281_simulation/6bitAdder.v 
+# -- Compiling module \6bitAdder 
+# 
+# Top level modules:
+# 	\6bitAdder 
+# End time: 14:18:01 on Nov 19,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+Y:/Documents/GitHub/ToyCPU/i281_simulation {Y:/Documents/GitHub/ToyCPU/i281_simulation/C16to1BusMUX.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:18:01 on Nov 19,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+Y:/Documents/GitHub/ToyCPU/i281_simulation" Y:/Documents/GitHub/ToyCPU/i281_simulation/C16to1BusMUX.v 
+# -- Compiling module C16to1BusMUX
+# 
+# Top level modules:
+# 	C16to1BusMUX
+# End time: 14:18:01 on Nov 19,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+Y:/Documents/GitHub/ToyCPU/i281_simulation {Y:/Documents/GitHub/ToyCPU/i281_simulation/BusNot.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:18:01 on Nov 19,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+Y:/Documents/GitHub/ToyCPU/i281_simulation" Y:/Documents/GitHub/ToyCPU/i281_simulation/BusNot.v 
+# -- Compiling module BusNot
+# 
+# Top level modules:
+# 	BusNot
+# End time: 14:18:01 on Nov 19,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+Y:/Documents/GitHub/ToyCPU/i281_simulation {Y:/Documents/GitHub/ToyCPU/i281_simulation/Block3.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:18:02 on Nov 19,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+Y:/Documents/GitHub/ToyCPU/i281_simulation" Y:/Documents/GitHub/ToyCPU/i281_simulation/Block3.v 
+# -- Compiling module Block3
+# 
+# Top level modules:
+# 	Block3
+# End time: 14:18:02 on Nov 19,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+Y:/Documents/GitHub/ToyCPU/i281_simulation {Y:/Documents/GitHub/ToyCPU/i281_simulation/ALU_Flag_Calculator.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:18:02 on Nov 19,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+Y:/Documents/GitHub/ToyCPU/i281_simulation" Y:/Documents/GitHub/ToyCPU/i281_simulation/ALU_Flag_Calculator.v 
+# -- Compiling module ALU_Flag_Calculator
+# 
+# Top level modules:
+# 	ALU_Flag_Calculator
+# End time: 14:18:02 on Nov 19,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+Y:/Documents/GitHub/ToyCPU/i281_simulation {Y:/Documents/GitHub/ToyCPU/i281_simulation/8WidWideBusMux.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:18:02 on Nov 19,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+Y:/Documents/GitHub/ToyCPU/i281_simulation" Y:/Documents/GitHub/ToyCPU/i281_simulation/8WidWideBusMux.v 
+# -- Compiling module \8WidWideBusMux 
+# 
+# Top level modules:
+# 	\8WidWideBusMux 
+# End time: 14:18:02 on Nov 19,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+Y:/Documents/GitHub/ToyCPU/i281_simulation {Y:/Documents/GitHub/ToyCPU/i281_simulation/ALU.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:18:02 on Nov 19,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+Y:/Documents/GitHub/ToyCPU/i281_simulation" Y:/Documents/GitHub/ToyCPU/i281_simulation/ALU.v 
+# -- Compiling module ALU
+# 
+# Top level modules:
+# 	ALU
+# End time: 14:18:02 on Nov 19,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+Y:/Documents/GitHub/ToyCPU/i281_simulation {Y:/Documents/GitHub/ToyCPU/i281_simulation/7WidWideBusMux.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:18:02 on Nov 19,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+Y:/Documents/GitHub/ToyCPU/i281_simulation" Y:/Documents/GitHub/ToyCPU/i281_simulation/7WidWideBusMux.v 
+# -- Compiling module \7WidWideBusMux 
+# 
+# Top level modules:
+# 	\7WidWideBusMux 
+# End time: 14:18:02 on Nov 19,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+Y:/Documents/GitHub/ToyCPU/i281_simulation {Y:/Documents/GitHub/ToyCPU/i281_simulation/6WideBusMux.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:18:02 on Nov 19,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+Y:/Documents/GitHub/ToyCPU/i281_simulation" Y:/Documents/GitHub/ToyCPU/i281_simulation/6WideBusMux.v 
+# -- Compiling module \6WideBusMux 
+# 
+# Top level modules:
+# 	\6WideBusMux 
+# End time: 14:18:02 on Nov 19,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+Y:/Documents/GitHub/ToyCPU/i281_simulation {Y:/Documents/GitHub/ToyCPU/i281_simulation/Video_Card.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:18:02 on Nov 19,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+Y:/Documents/GitHub/ToyCPU/i281_simulation" Y:/Documents/GitHub/ToyCPU/i281_simulation/Video_Card.v 
+# -- Compiling module Video_Card
+# 
+# Top level modules:
+# 	Video_Card
+# End time: 14:18:03 on Nov 19,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+Y:/Documents/GitHub/ToyCPU/i281_simulation {Y:/Documents/GitHub/ToyCPU/i281_simulation/8wide16to1BusMUX.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:18:03 on Nov 19,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+Y:/Documents/GitHub/ToyCPU/i281_simulation" Y:/Documents/GitHub/ToyCPU/i281_simulation/8wide16to1BusMUX.v 
+# -- Compiling module \8wide16to1BusMUX 
+# 
+# Top level modules:
+# 	\8wide16to1BusMUX 
+# End time: 14:18:03 on Nov 19,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+Y:/Documents/GitHub/ToyCPU/i281_simulation {Y:/Documents/GitHub/ToyCPU/i281_simulation/8bitAdder.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:18:03 on Nov 19,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+Y:/Documents/GitHub/ToyCPU/i281_simulation" Y:/Documents/GitHub/ToyCPU/i281_simulation/8bitAdder.v 
+# -- Compiling module \8bitAdder 
+# 
+# Top level modules:
+# 	\8bitAdder 
+# End time: 14:18:03 on Nov 19,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+Y:/Documents/GitHub/ToyCPU/i281_simulation {Y:/Documents/GitHub/ToyCPU/i281_simulation/Control_FSM.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:18:03 on Nov 19,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+Y:/Documents/GitHub/ToyCPU/i281_simulation" Y:/Documents/GitHub/ToyCPU/i281_simulation/Control_FSM.v 
+# -- Compiling module Control_FSM
+# 
+# Top level modules:
+# 	Control_FSM
+# End time: 14:18:03 on Nov 19,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+Y:/Documents/GitHub/ToyCPU/i281_simulation {Y:/Documents/GitHub/ToyCPU/i281_simulation/8wide4to1BusMUX.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:18:03 on Nov 19,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+Y:/Documents/GitHub/ToyCPU/i281_simulation" Y:/Documents/GitHub/ToyCPU/i281_simulation/8wide4to1BusMUX.v 
+# -- Compiling module \8wide4to1BusMUX 
+# 
+# Top level modules:
+# 	\8wide4to1BusMUX 
+# End time: 14:18:03 on Nov 19,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+Y:/Documents/GitHub/ToyCPU/i281_simulation {Y:/Documents/GitHub/ToyCPU/i281_simulation/i281_CPU.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:18:03 on Nov 19,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+Y:/Documents/GitHub/ToyCPU/i281_simulation" Y:/Documents/GitHub/ToyCPU/i281_simulation/i281_CPU.v 
+# -- Compiling module i281_CPU
+# 
+# Top level modules:
+# 	i281_CPU
+# End time: 14:18:03 on Nov 19,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -vlog01compat -work work +incdir+Y:/Documents/GitHub/ToyCPU/i281_simulation {Y:/Documents/GitHub/ToyCPU/i281_simulation/i281_CPU.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:18:03 on Nov 19,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+Y:/Documents/GitHub/ToyCPU/i281_simulation" Y:/Documents/GitHub/ToyCPU/i281_simulation/i281_CPU.v 
+# -- Compiling module i281_CPU
+# 
+# Top level modules:
+# 	i281_CPU
+# End time: 14:18:04 on Nov 19,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+Y:/Documents/GitHub/ToyCPU/i281_simulation {Y:/Documents/GitHub/ToyCPU/i281_simulation/i281_cpu_tb.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:18:04 on Nov 19,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+Y:/Documents/GitHub/ToyCPU/i281_simulation" Y:/Documents/GitHub/ToyCPU/i281_simulation/i281_cpu_tb.v 
+# -- Compiling module i281_cpu_tb
+# 
+# Top level modules:
+# 	i281_cpu_tb
+# End time: 14:18:04 on Nov 19,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L fiftyfivenm_ver -L rtl_work -L work -voptargs="+acc"  i281_cpu_tb
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L fiftyfivenm_ver -L rtl_work -L work -voptargs=""+acc"" i281_cpu_tb 
+# Start time: 14:18:04 on Nov 19,2025
+# Loading work.i281_cpu_tb
+# Loading work.i281_CPU
+# Loading work.\8WidWideBusMux 
+# Loading work.Block3
+# Loading work.\4x8BitRegisters 
+# Loading work.Registers8bit
+# Loading work.\2BitDecoderWithEnable 
+# Loading work.\8wide4to1BusMUX 
+# Loading work.Opcode_Decoder
+# Loading work.\4to16DecoderWithEnable 
+# Loading work.\2to4DecoderWithEnable 
+# Loading work.\1to2DecoderWithEnable 
+# Loading work.ProgramCounter
+# Loading work.IMEM
+# Loading work.IMEM_high
+# Loading work.User_Code_High
+# Loading work.ONES
+# Loading work.SixteenWideBusMux
+# Loading work.Registers16bit
+# Loading work.C16to1BusMUX
+# Loading work.ReadOnly_16x16_Register_File_Low
+# Loading work.BIOS_Hardcoded_Low
+# Loading work.ReadOnly_16x16_Register_File_High
+# Loading work.BIOS_Hardcoded_High
+# Loading work.\16Wide4To1BusMux 
+# Loading work.IMEM_low
+# Loading work.User_Code_Low
+# Loading work.Control_FSM
+# Loading work.Clock_dividers
+# Loading work.Clock_divider_512
+# Loading work.Clock_divider_4_16_and_64
+# Loading work.ALU
+# Loading work.ShiftNoDff
+# Loading work.Flag_Registers
+# Loading work.ALU_Flag_Calculator
+# Loading work.\8bitAdder 
+# Loading work.FullAdder
+# Loading work.Video_Card
+# Loading work.seven_seg_decoder_BUSOUT
+# Loading work.\4WideBusMux 
+# Loading work.\7WidWideBusMux 
+# Loading work.BusNot
+# Loading work.DMEM
+# Loading work.User_Data
+# Loading work.\8wide16to1BusMUX 
+# Loading work.\6bitAdder 
+# Loading work.\6WideBusMux 
+# ** Warning: (vsim-3008) Y:/Documents/GitHub/ToyCPU/i281_simulation/i281_cpu_tb.v(116): [CNNODP] - Component name (Code_High) is not on a downward path.
+#    Time: 0 ps  Iteration: 0  Instance: /i281_cpu_tb File: Y:/Documents/GitHub/ToyCPU/i281_simulation/i281_cpu_tb.v
+# ** Error: (vsim-3043) Y:/Documents/GitHub/ToyCPU/i281_simulation/i281_cpu_tb.v(116): Unresolved reference to 'Code_High' in uut.Code_High.
+#    Time: 0 ps  Iteration: 0  Instance: /i281_cpu_tb File: Y:/Documents/GitHub/ToyCPU/i281_simulation/i281_cpu_tb.v
+# ** Warning: (vsim-3008) Y:/Documents/GitHub/ToyCPU/i281_simulation/i281_cpu_tb.v(115): [CNNODP] - Component name (Code_Low) is not on a downward path.
+#    Time: 0 ps  Iteration: 0  Instance: /i281_cpu_tb File: Y:/Documents/GitHub/ToyCPU/i281_simulation/i281_cpu_tb.v
+# ** Error: (vsim-3043) Y:/Documents/GitHub/ToyCPU/i281_simulation/i281_cpu_tb.v(115): Unresolved reference to 'Code_Low' in uut.Code_Low.
+#    Time: 0 ps  Iteration: 0  Instance: /i281_cpu_tb File: Y:/Documents/GitHub/ToyCPU/i281_simulation/i281_cpu_tb.v
+# ** Warning: (vsim-3008) Y:/Documents/GitHub/ToyCPU/i281_simulation/i281_cpu_tb.v(117): [CNNODP] - Component name (Data_Mem) is not on a downward path.
+#    Time: 0 ps  Iteration: 0  Instance: /i281_cpu_tb File: Y:/Documents/GitHub/ToyCPU/i281_simulation/i281_cpu_tb.v
+# ** Error: (vsim-3043) Y:/Documents/GitHub/ToyCPU/i281_simulation/i281_cpu_tb.v(117): Unresolved reference to 'Data_Mem' in uut.Data_Mem.
+#    Time: 0 ps  Iteration: 0  Instance: /i281_cpu_tb File: Y:/Documents/GitHub/ToyCPU/i281_simulation/i281_cpu_tb.v
+# ** Warning: (vsim-3008) Y:/Documents/GitHub/ToyCPU/i281_simulation/i281_cpu_tb.v(133): [CNNODP] - Component name (RegA) is not on a downward path.
+#    Time: 0 ps  Iteration: 0  Instance: /i281_cpu_tb File: Y:/Documents/GitHub/ToyCPU/i281_simulation/i281_cpu_tb.v
+# ** Error: (vsim-3043) Y:/Documents/GitHub/ToyCPU/i281_simulation/i281_cpu_tb.v(133): Unresolved reference to 'RegA' in uut.RegA.
+#    Time: 0 ps  Iteration: 0  Instance: /i281_cpu_tb File: Y:/Documents/GitHub/ToyCPU/i281_simulation/i281_cpu_tb.v
+# ** Warning: (vsim-3008) Y:/Documents/GitHub/ToyCPU/i281_simulation/i281_cpu_tb.v(133): [CNNODP] - Component name (RegB) is not on a downward path.
+#    Time: 0 ps  Iteration: 0  Instance: /i281_cpu_tb File: Y:/Documents/GitHub/ToyCPU/i281_simulation/i281_cpu_tb.v
+# ** Error: (vsim-3043) Y:/Documents/GitHub/ToyCPU/i281_simulation/i281_cpu_tb.v(133): Unresolved reference to 'RegB' in uut.RegB.
+#    Time: 0 ps  Iteration: 0  Instance: /i281_cpu_tb File: Y:/Documents/GitHub/ToyCPU/i281_simulation/i281_cpu_tb.v
+# ** Warning: (vsim-3008) Y:/Documents/GitHub/ToyCPU/i281_simulation/i281_cpu_tb.v(133): [CNNODP] - Component name (RegC) is not on a downward path.
+#    Time: 0 ps  Iteration: 0  Instance: /i281_cpu_tb File: Y:/Documents/GitHub/ToyCPU/i281_simulation/i281_cpu_tb.v
+# ** Error: (vsim-3043) Y:/Documents/GitHub/ToyCPU/i281_simulation/i281_cpu_tb.v(133): Unresolved reference to 'RegC' in uut.RegC.
+#    Time: 0 ps  Iteration: 0  Instance: /i281_cpu_tb File: Y:/Documents/GitHub/ToyCPU/i281_simulation/i281_cpu_tb.v
+# ** Warning: (vsim-3008) Y:/Documents/GitHub/ToyCPU/i281_simulation/i281_cpu_tb.v(133): [CNNODP] - Component name (RegD) is not on a downward path.
+#    Time: 0 ps  Iteration: 0  Instance: /i281_cpu_tb File: Y:/Documents/GitHub/ToyCPU/i281_simulation/i281_cpu_tb.v
+# ** Error: (vsim-3043) Y:/Documents/GitHub/ToyCPU/i281_simulation/i281_cpu_tb.v(133): Unresolved reference to 'RegD' in uut.RegD.
+#    Time: 0 ps  Iteration: 0  Instance: /i281_cpu_tb File: Y:/Documents/GitHub/ToyCPU/i281_simulation/i281_cpu_tb.v
+# ** Warning: (vsim-3017) Y:/Documents/GitHub/ToyCPU/i281_simulation/i281_cpu_tb.v(65): [TFMPC] - Too few port connections. Expected 42, found 38.
+#    Time: 0 ps  Iteration: 0  Instance: /i281_cpu_tb/uut File: Y:/Documents/GitHub/ToyCPU/i281_simulation/i281_CPU.v
+# ** Warning: (vsim-3015) Y:/Documents/GitHub/ToyCPU/i281_simulation/i281_cpu_tb.v(65): [PCDPC] - Port size (16) does not match connection size (18) for port 'Switch_Input'. The port definition is at: Y:/Documents/GitHub/ToyCPU/i281_simulation/i281_CPU.v(12).
+#    Time: 0 ps  Iteration: 0  Instance: /i281_cpu_tb/uut File: Y:/Documents/GitHub/ToyCPU/i281_simulation/i281_CPU.v
+# ** Error (suppressible): (vsim-3053) Y:/Documents/GitHub/ToyCPU/i281_simulation/i281_cpu_tb.v(65): Illegal output or inout port connection for port 'pin_name1'.
+#    Time: 0 ps  Iteration: 0  Instance: /i281_cpu_tb/uut File: Y:/Documents/GitHub/ToyCPU/i281_simulation/i281_CPU.v
+# ** Error (suppressible): (vsim-3053) Y:/Documents/GitHub/ToyCPU/i281_simulation/i281_cpu_tb.v(65): Illegal output or inout port connection for port 'pin_name2'.
+#    Time: 0 ps  Iteration: 0  Instance: /i281_cpu_tb/uut File: Y:/Documents/GitHub/ToyCPU/i281_simulation/i281_CPU.v
+# ** Error (suppressible): (vsim-3053) Y:/Documents/GitHub/ToyCPU/i281_simulation/i281_cpu_tb.v(65): Illegal output or inout port connection for port 'pin_name3'.
+#    Time: 0 ps  Iteration: 0  Instance: /i281_cpu_tb/uut File: Y:/Documents/GitHub/ToyCPU/i281_simulation/i281_CPU.v
+# ** Error (suppressible): (vsim-3053) Y:/Documents/GitHub/ToyCPU/i281_simulation/i281_cpu_tb.v(65): Illegal output or inout port connection for port 'pin_name4'.
+#    Time: 0 ps  Iteration: 0  Instance: /i281_cpu_tb/uut File: Y:/Documents/GitHub/ToyCPU/i281_simulation/i281_CPU.v
+# ** Error (suppressible): (vsim-3053) Y:/Documents/GitHub/ToyCPU/i281_simulation/i281_cpu_tb.v(65): Illegal output or inout port connection for port 'pin_name5'.
+#    Time: 0 ps  Iteration: 0  Instance: /i281_cpu_tb/uut File: Y:/Documents/GitHub/ToyCPU/i281_simulation/i281_CPU.v
+# ** Error (suppressible): (vsim-3053) Y:/Documents/GitHub/ToyCPU/i281_simulation/i281_cpu_tb.v(65): Illegal output or inout port connection for port 'pin_name6'.
+#    Time: 0 ps  Iteration: 0  Instance: /i281_cpu_tb/uut File: Y:/Documents/GitHub/ToyCPU/i281_simulation/i281_CPU.v
+# ** Warning: (vsim-3015) Y:/Documents/GitHub/ToyCPU/i281_simulation/i281_cpu_tb.v(65): [PCDPC] - Port size (1) does not match connection size (8) for port 'IMMEDVAL0'. The port definition is at: Y:/Documents/GitHub/ToyCPU/i281_simulation/i281_CPU.v(31).
+#    Time: 0 ps  Iteration: 0  Instance: /i281_cpu_tb/uut File: Y:/Documents/GitHub/ToyCPU/i281_simulation/i281_CPU.v
+# ** Warning: (vsim-3015) Y:/Documents/GitHub/ToyCPU/i281_simulation/i281_cpu_tb.v(65): [PCDPC] - Port size (1) does not match connection size (8) for port 'IMMEDVAL1'. The port definition is at: Y:/Documents/GitHub/ToyCPU/i281_simulation/i281_CPU.v(32).
+#    Time: 0 ps  Iteration: 0  Instance: /i281_cpu_tb/uut File: Y:/Documents/GitHub/ToyCPU/i281_simulation/i281_CPU.v
+# ** Warning: (vsim-3015) Y:/Documents/GitHub/ToyCPU/i281_simulation/i281_cpu_tb.v(65): [PCDPC] - Port size (1) does not match connection size (8) for port 'IMMEDVAL2'. The port definition is at: Y:/Documents/GitHub/ToyCPU/i281_simulation/i281_CPU.v(33).
+#    Time: 0 ps  Iteration: 0  Instance: /i281_cpu_tb/uut File: Y:/Documents/GitHub/ToyCPU/i281_simulation/i281_CPU.v
+# ** Warning: (vsim-3015) Y:/Documents/GitHub/ToyCPU/i281_simulation/i281_cpu_tb.v(65): [PCDPC] - Port size (1) does not match connection size (8) for port 'IMMEDVAL3'. The port definition is at: Y:/Documents/GitHub/ToyCPU/i281_simulation/i281_CPU.v(34).
+#    Time: 0 ps  Iteration: 0  Instance: /i281_cpu_tb/uut File: Y:/Documents/GitHub/ToyCPU/i281_simulation/i281_CPU.v
+# ** Warning: (vsim-3015) Y:/Documents/GitHub/ToyCPU/i281_simulation/i281_cpu_tb.v(65): [PCDPC] - Port size (1) does not match connection size (8) for port 'IMMEDVAL4'. The port definition is at: Y:/Documents/GitHub/ToyCPU/i281_simulation/i281_CPU.v(35).
+#    Time: 0 ps  Iteration: 0  Instance: /i281_cpu_tb/uut File: Y:/Documents/GitHub/ToyCPU/i281_simulation/i281_CPU.v
+# ** Warning: (vsim-3015) Y:/Documents/GitHub/ToyCPU/i281_simulation/i281_cpu_tb.v(65): [PCDPC] - Port size (1) does not match connection size (8) for port 'IMMEDVAL5'. The port definition is at: Y:/Documents/GitHub/ToyCPU/i281_simulation/i281_CPU.v(36).
+#    Time: 0 ps  Iteration: 0  Instance: /i281_cpu_tb/uut File: Y:/Documents/GitHub/ToyCPU/i281_simulation/i281_CPU.v
+# ** Warning: (vsim-3015) Y:/Documents/GitHub/ToyCPU/i281_simulation/i281_cpu_tb.v(65): [PCDPC] - Port size (1) does not match connection size (8) for port 'IMMEDVAL6'. The port definition is at: Y:/Documents/GitHub/ToyCPU/i281_simulation/i281_CPU.v(37).
+#    Time: 0 ps  Iteration: 0  Instance: /i281_cpu_tb/uut File: Y:/Documents/GitHub/ToyCPU/i281_simulation/i281_CPU.v
+# ** Warning: (vsim-3015) Y:/Documents/GitHub/ToyCPU/i281_simulation/i281_cpu_tb.v(65): [PCDPC] - Port size (1) does not match connection size (8) for port 'IMMEDVAL7'. The port definition is at: Y:/Documents/GitHub/ToyCPU/i281_simulation/i281_CPU.v(38).
+#    Time: 0 ps  Iteration: 0  Instance: /i281_cpu_tb/uut File: Y:/Documents/GitHub/ToyCPU/i281_simulation/i281_CPU.v
+# ** Warning: (vsim-3722) Y:/Documents/GitHub/ToyCPU/i281_simulation/i281_cpu_tb.v(65): [TFMPC] - Missing connection for port 'Negative_Flag'.
+# ** Warning: (vsim-3722) Y:/Documents/GitHub/ToyCPU/i281_simulation/i281_cpu_tb.v(65): [TFMPC] - Missing connection for port 'Zero_Flag'.
+# ** Warning: (vsim-3722) Y:/Documents/GitHub/ToyCPU/i281_simulation/i281_cpu_tb.v(65): [TFMPC] - Missing connection for port 'Carry_Flag'.
+# ** Warning: (vsim-3722) Y:/Documents/GitHub/ToyCPU/i281_simulation/i281_cpu_tb.v(65): [TFMPC] - Missing connection for port 'OverFlow_Flag'.
+# ** Warning: (vsim-3017) Y:/Documents/GitHub/ToyCPU/i281_simulation/i281_CPU.v(487): [TFMPC] - Too few port connections. Expected 6, found 4.
+#    Time: 0 ps  Iteration: 0  Instance: /i281_cpu_tb/uut/b2v_Program_Counter_Adder_For_Jump_and_Branch_Offsets File: Y:/Documents/GitHub/ToyCPU/i281_simulation/6bitAdder.v
+# ** Warning: (vsim-3722) Y:/Documents/GitHub/ToyCPU/i281_simulation/i281_CPU.v(487): [TFMPC] - Missing connection for port 'Carry'.
+# ** Warning: (vsim-3722) Y:/Documents/GitHub/ToyCPU/i281_simulation/i281_CPU.v(487): [TFMPC] - Missing connection for port 'Overflow'.
+# ** Warning: (vsim-3017) Y:/Documents/GitHub/ToyCPU/i281_simulation/i281_CPU.v(494): [TFMPC] - Too few port connections. Expected 6, found 4.
+#    Time: 0 ps  Iteration: 0  Instance: /i281_cpu_tb/uut/b2v_Program_Counter_Increment_By_1 File: Y:/Documents/GitHub/ToyCPU/i281_simulation/6bitAdder.v
+# ** Warning: (vsim-3722) Y:/Documents/GitHub/ToyCPU/i281_simulation/i281_CPU.v(494): [TFMPC] - Missing connection for port 'Carry'.
+# ** Warning: (vsim-3722) Y:/Documents/GitHub/ToyCPU/i281_simulation/i281_CPU.v(494): [TFMPC] - Missing connection for port 'Overflow'.
+# Error loading design
+# Error: Error loading design
+#        Pausing macro execution
+# MACRO ./i281_cpu_run_msim_rtl_verilog.do PAUSED at line 58
+# A time value could not be extracted from the current line
+# A time value could not be extracted from the current line
+# A time value could not be extracted from the current line
+# End time: 14:19:57 on Nov 19,2025, Elapsed time: 0:01:53
+# Errors: 13, Warnings: 27

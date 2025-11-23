@@ -1,0 +1,33 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
+
+-- i281 Next Address Logic
+-- Now correctly features TWO OUTPUTS:
+-- 1. next_pc: Goes to the Program Counter (Next Address)
+-- 2. pc_plus_one_out: Goes to the Datapath/Register File (Return Address)
+
+entity pc_logic is
+    port (
+        current_pc      : in  std_logic_vector(5 downto 0); -- From PC Register
+        offset       : in  std_logic_vector(5 downto 0); -- Offset from Instruction
+        next_pc_off         : out std_logic_vector(5 downto 0); -- The calculated pointer for the next cycle
+        next_pc : out std_logic_vector(5 downto 0)  -- The return address (Current PC + 1)
+    );
+end pc_logic;
+
+architecture Behavioral of pc_logic is
+
+    signal pc_plus_one_internal : std_logic_vector(5 downto 0);
+    signal branch_target        : std_logic_vector(5 downto 0);
+    signal mux_select           : std_logic;
+
+begin
+
+    -- 1. Adder 1: Increment Logic
+    -- Calculates PC + 1
+    pc_plus_one_internal <= current_pc + 1;
+    branch_target <= pc_plus_one_internal + offset;
+	 next_pc_off<=branch_target;
+	 next_pc<=pc_plus_one_internal;
+end Behavioral;
